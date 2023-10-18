@@ -5,11 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-     "dev": "tailwindcss -i ./src/input.css -o ./dist/style.css --watch"
+    "dev": "tailwindcss -i ./src/input.css -o ./dist/style.css --watch"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "tailwindcss": "^3.3.3"
+  },
+  "dependencies": {
+    "feather-icons": "^4.29.1",
+    "save": "^2.9.0"
   }
 }
