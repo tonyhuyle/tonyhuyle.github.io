@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="h-screen">
+<html lang="en" class="min-h-screen">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +8,11 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <script src="https://unpkg.com/feather-icons"></script>
+    <script src="menu.js"></script>
 </head>
 
-
-<body class="bg-gradient-to-b from-teal-900  to-green-400 h-screen">
+<!--Welcome Screen-->
+<body class="bg-gradient-to-b from-teal-900  to-green-400">
     <nav class= "py-4 flex">
         <div class="container flex px-7">
         <div class= "text-black font-bold">
@@ -40,17 +41,29 @@
                 <div class="min-h-screenflex items-center justify-center flex lg:space-x-40 mt-8">
                     <a href="https://www.linkedin.com/in/tony-le-3b148a244/" target="_blank" class="mt-10"><i data-feather="linkedin"></i>
                     <a href="https://github.com/tonyhuyle" target="_blank" class="mt-10"><i data-feather="github"></i>
-                    <a href="#" target="blank" class="mt-10"><i data-feather="book-open"></i>
+                    <a href="#" target="_blank" class="mt-10"><i data-feather="book-open"></i>
                 <script>
                     feather.replace();
                   </script>
                 </a>
-                </div>           
+                </div>    
         </div>
+        <div class="min-h-screen flex flex-col items-center font-bold text-white animate__animated animate__fadeIn" style="animation-duration: 3s;">
+            <div class="relative bottom-20 flex justify-center">
+                <button class= "text-lg">
+                    <i data-feather="chevrons-down"></i>
+                </button>
+                <script>
+                    feather.replace();
+                  </script>
+            </div>
+        </div>     
     </header>
     
+    
+
     <!-- Portfolio -->
-    <section class="content-section" id="projects">
+    <section class="content-section bg-green-450" id="projects">
         <div class="h-screen overflow-y-auto flex flex-col items-center">
             <div class="text-center">
               <h3 class="text-secondary mb-0">Portfolio</h3>
