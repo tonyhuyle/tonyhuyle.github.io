@@ -50,11 +50,14 @@
         </div>
         <div class="min-h-screen flex flex-col items-center font-bold text-white animate__animated animate__fadeIn" style="animation-duration: 3s;">
             <div class="relative bottom-20 flex justify-center">
-                <button class= "text-lg">
+                <button id = "downButton" class= "text-lg">
                     <i data-feather="chevrons-down"></i>
                 </button>
                 <script>
                     feather.replace();
+                    document.getElementById('downButton').addEventListener('click', function() {
+                        document.getElementById('section2').scrollIntoView({ behavior: 'smooth' });
+                    });
                   </script>
             </div>
         </div>     
@@ -64,8 +67,8 @@
 
     <!-- Portfolio -->
     <section class="content-section bg-green-450" id="projects">
-        <div class="h-screen overflow-y-auto flex flex-col items-center">
-            <div class="text-center">
+        <div id= "section2">
+            <div class="text-center flex flex-col items-center">
               <h3 class="text-secondary mb-0">Portfolio</h3>
               <h2 class="mb-2">Personal Projects</h2>
             </div>
