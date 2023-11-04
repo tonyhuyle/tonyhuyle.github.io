@@ -14,7 +14,8 @@
 <!--Welcome Screen-->
 <body class="bg-gradient-to-b from-teal-900  to-green-400">
     <nav class= "py-4 flex">
-        <div class="container flex px-7">
+        <!--Header-->
+        <div id = "header" class="container flex px-7">
         <div class= "text-black font-bold">
             <h1 class="fixed text-3xl animate__animated animate__fadeInLeft">Tony Le</h1>
         </div>
@@ -59,6 +60,42 @@
                         document.getElementById('section2').scrollIntoView({ behavior: 'smooth' });
                     });
                   </script>
+                    <script>
+            document.getElementById("header");
+            let prevScrollPos = window.pageYOffset;
+            let isFadingOut = false;
+            const button = document.querySelector("downButton");
+
+                /*
+                button.addEventListener("click", function() {
+                    header.style.transition = 'opacity 0.3s ease';
+                    header.style.opacity = '1';
+                    header.style.position = 'fixed';
+
+                    isFadingOut = false;
+                }); */
+                
+
+                window.addEventListener('scroll', function () {
+                    const currentScrollPos = window.pageYOffset;
+
+                    if (window.scrollY > 1 && window.scrollY < 3 ) {
+                        if (!isFadingOut) {
+                        isFadingOut = true;
+                        header.style.transition = 'opacity 0.3s ease';
+                        header.style.opacity = '0';
+                        }
+                    } else if(window.scrollY === 0) {
+                        // Scrolling up, fade in the header
+                        isFadingOut = false;
+                        header.style.transition = 'opacity 0.3s ease';
+                        header.style.opacity = '1';
+                    }
+
+                  
+                    prevScrollPos = currentScrollPos;
+                });
+        </script>
             </div>
         </div>     
     </header>
@@ -73,5 +110,6 @@
               <h2 class="mb-2">Personal Projects</h2>
             </div>
         </div>
+        
 </body>
 </html>
