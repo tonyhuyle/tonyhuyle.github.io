@@ -8,34 +8,38 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <script src="https://unpkg.com/feather-icons"></script>
-    <script src="menu.js"></script>
+    <script src="main.js"></script>
 </head>
 
 <!--Welcome Screen-->
-<body class="bg-gradient-to-b from-teal-900  to-green-400">
+<body class="bg-gradient-to-b h-screen from-teal-900  to-green-400">
     <nav class= "py-4 flex">
         <!--Header-->
-        <div id = "header" class="container flex px-7">
-        <div class= "text-black font-bold">
-            <h1 class="fixed text-3xl animate__animated animate__fadeInLeft">Tony Le</h1>
-        </div>
-        <div class="fixed top-0 right-0 p-4">
-            <button id="menu-toggle" class="lg:hidden">
-                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                  </svg>
-            </button>
-            <nav id="menu" class="hidden lg:flex lg:items-center lg:space-x-20 text-2xl text-white font-bold animate__animated animate__fadeInRight">
-                <a href="#">About</a>
-                <a href="#">Projects</a>
-                <a href="#">Experiences</a>
-                <a href="#">Contact</a>
-            </nav>
-        </div>
-    </div>
+        <header id = "bg" class="bg-teal-800 fixed w-full top-0 p-7 transition-opacity duration-300 ease-in-out bg-transparent">
+        </header>
+        <header id = "header" class="fixed opacity-100 container flex px-7">
+            <div class= "text-black font-bold">
+                <h1 class="fixed text-3xl animate__animated animate__fadeInLeft">Tony Le</h1>
+            </div>
+                <div class="fixed top-0 right-0 p-4">
+                    <button id="menu-toggle" class="lg:hidden">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                    <nav id="menu" class="hidden lg:flex lg:items-center lg:space-x-20 text-2xl text-white font-bold animate__animated animate__fadeInRight">
+                        <a href="#">About</a>
+                        <a href="#">Projects</a>
+                        <a href="#">Experiences</a>
+                        <a href="#">Contact</a>
+                    </nav>
+                </div>
+            </div>
+            <script src="main.js"></script>
+        </header>
     </nav>
 
-    <header>
+    <div>
         <div class="min-h-screen flex flex-col items-center justify-center font-bold text-white animate__animated animate__fadeIn" style="animation-duration: 3s;">
             <h1 class="text-6xl">Hi, I'm Tony Le</h1>
             
@@ -60,50 +64,14 @@
                         document.getElementById('section2').scrollIntoView({ behavior: 'smooth' });
                     });
                   </script>
-                    <script>
-            document.getElementById("header");
-            let prevScrollPos = window.pageYOffset;
-            let isFadingOut = false;
-            const button = document.querySelector("downButton");
-
-                /*
-                button.addEventListener("click", function() {
-                    header.style.transition = 'opacity 0.3s ease';
-                    header.style.opacity = '1';
-                    header.style.position = 'fixed';
-
-                    isFadingOut = false;
-                }); */
-                
-
-                window.addEventListener('scroll', function () {
-                    const currentScrollPos = window.pageYOffset;
-
-                    if (window.scrollY > 1 && window.scrollY < 3 ) {
-                        if (!isFadingOut) {
-                        isFadingOut = true;
-                        header.style.transition = 'opacity 0.3s ease';
-                        header.style.opacity = '0';
-                        }
-                    } else if(window.scrollY === 0) {
-                        // Scrolling up, fade in the header
-                        isFadingOut = false;
-                        header.style.transition = 'opacity 0.3s ease';
-                        header.style.opacity = '1';
-                    }
-
-                  
-                    prevScrollPos = currentScrollPos;
-                });
-        </script>
             </div>
         </div>     
-    </header>
-    
+    </div>
+    </body>
     
 
     <!-- Portfolio -->
-    <section class="content-section bg-green-450" id="projects">
+    <section class="content-section h-screen bg-white" id="projects">
         <div id= "section2">
             <div class="text-center flex flex-col items-center">
               <h3 class="text-secondary mb-0">Portfolio</h3>
@@ -111,5 +79,4 @@
             </div>
         </div>
         
-</body>
 </html>
