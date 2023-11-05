@@ -624,6 +624,18 @@ video {
   height: 100vh;
 }
 
+.h-20 {
+  height: 5rem;
+}
+
+.h-0 {
+  height: 0px;
+}
+
+.h-1 {
+  height: 0.25rem;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -694,6 +706,26 @@ video {
 
 .to-green-400 {
   --tw-gradient-to: #4ade80 var(--tw-gradient-to-position);
+}
+
+.to-green-800 {
+  --tw-gradient-to: #166534 var(--tw-gradient-to-position);
+}
+
+.to-green-500 {
+  --tw-gradient-to: #22c55e var(--tw-gradient-to-position);
+}
+
+.to-green-600 {
+  --tw-gradient-to: #16a34a var(--tw-gradient-to-position);
+}
+
+.bg-cover {
+  background-size: cover;
+}
+
+.bg-no-repeat {
+  background-repeat: no-repeat;
 }
 
 .p-4 {
