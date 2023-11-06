@@ -20,7 +20,22 @@ window.addEventListener("scroll", () => {
     } else if (scrollPosition > fadeInThreshold) {
         header.style.opacity = 1;
     }
-
-    
 });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+const bg = document.getElementById("bg");
+    window.addEventListener("scroll", () => {
+        const scrollPosition = window.scrollY;
+
+        console.log("Scroll position: " + scrollPosition);
+        const startFadeIn = 500;
+        if(scrollPosition >= startFadeIn) {
+            console.log("Fading in...");
+            bg.classList.remove("opacity-0")
+        }
+        else if (scrollPosition < startFadeIn) {
+            bg.classList.add("opacity-0")
+        }
+    });
 });
