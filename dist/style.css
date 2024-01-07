@@ -626,6 +626,46 @@ video {
   margin-top: 2rem;
 }
 
+.mt-\[-1rem\] {
+  margin-top: -1rem;
+}
+
+.mt-\[-2rem\] {
+  margin-top: -2rem;
+}
+
+.mt-\[-0\.1rem\] {
+  margin-top: -0.1rem;
+}
+
+.mt-\[-0\.2rem\] {
+  margin-top: -0.2rem;
+}
+
+.mt-\[-0\.5rem\] {
+  margin-top: -0.5rem;
+}
+
+.mt-\[-0\.3rem\] {
+  margin-top: -0.3rem;
+}
+
+.mt-\[5rem\] {
+  margin-top: 5rem;
+}
+
+.mt-\[7rem\] {
+  margin-top: 7rem;
+}
+
+.mt-\[8rem\] {
+  margin-top: 8rem;
+}
+
+.mt-\[10rem\] {
+  margin-top: 10rem;
+}
+
 .flex {
   display: flex;
 }
@@ -780,6 +820,36 @@ video {
   padding-bottom: 1rem;
 }
 
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.px-20 {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -806,6 +876,11 @@ video {
 
 .text-lg {
   font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
   line-height: 1.75rem;
 }
 
