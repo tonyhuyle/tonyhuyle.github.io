@@ -79,10 +79,37 @@
               <h3 class="mb-2 py-4 font-bold text-4xl">Personal Projects</h3>
 
                 <div class="grid grid-cols-3 gap-3 w-90 h-40 mx-4">
-                    <img src="images/2D.jpg" alt="2D Game"/>
+                    <img src="images/2D.jpg" alt="2D Game" class="cursor-pointer" onclick="openModal()"/>
                     <img src="images/Weather_App.png" alt="Weather App"/>
-                    <img src="images/2D.jpg" alt="2D Game"/>
+                    <img src="images/Website.png" alt="Website"/>
                 </div>
+
+                                <!-- Modal -->
+                    <div id="imageModal" class="fixed inset-0 overflow-y-auto hidden bg-black bg-opacity-75">
+                        <div class="flex items-center justify-center min-h-screen">
+                            <div class="bg-white p-8 max-w-md mx-auto">
+                                <!-- Modal content -->
+                                <h1 class="font-bold text-center text-4xl">2D Game</h1>
+                                <h2 class="py-2">A functional 2D platformer game with two opposing characters capable of running, walking, attacking, and idling</h2>
+                                <div class="mt-2 flex justify-center">
+                                    <button class="mt-4 bg-black text-white px-4 py-2 rounded-md" onclick="closeModal()">Close</button>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    // JavaScript functions to open and close the modal
+                    function openModal() {
+                        document.getElementById('imageModal').classList.remove('hidden');
+                    }
+
+                    function closeModal() {
+                        document.getElementById('imageModal').classList.add('hidden');
+                    }
+                </script>
             </div>
         </div>
 </html>
