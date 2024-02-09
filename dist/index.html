@@ -124,45 +124,58 @@
                         <div class="container mx-auto mt-20 p-5 py-40">
                             <div class="relative p-10 h-full">
                                 <!-- Timeline -->
-                                <div class="h-80 top-0 border-r-4 absolute border-gray-400" style="left: 50%;"></div>
-                                <div class="h-80 bottom-0 border-r-4 absolute border-gray-400" style="left: 50%;"></div>
-                                <div class="h-80 py-80 border-r-4 absolute border-gray-400" style="left: 50%;"></div>
+                                <div class="absolute h-full w-1 bg-gray-400 left-1/2 transform -translate-x-1/2"></div>
                     
-                                <!-- Timeline events -->
-                                <div class="mb-20 flex justify-between items-center w-full left-timeline">
-                                    <div class="order-1 w-5/12"></div>
-                                    <div class="z-20 flex items-center order-1 bg-white shadow-xl w-40 h-40 rounded-full border-4 border-gray-400">
-                                        <img src="images/mlk.png" alt="Mama La" class="object-cover w-full h-full">
-                                    </div>
-                                    <div class="order-1 p-4 w-5/12">
-                                        <h3 class="mb-3 font-bold text-white">Event 1</h3>
-                                        <p class="text-sm leading-snug tracking-wide text-white">Description for Event 1.</p>
+                                <!-- Timeline Container -->
+                                <div class="relative max-w-screen-lg mx-auto mb-10">
+                                    <!-- First Event -->
+                                    <div class="mb-40 flex justify-between items-center left-timeline">
+                                        <div class="order-1 w-5/12"></div>
+                                        <div class="z-20 flex items-center order-1 bg-white shadow-xl w-40 h-40 rounded-full border-4 border-gray-400">
+                                            <img src="images/mlk.png" alt="Mama La" class="object-cover w-full h-full">
+                                        </div>
+                                        <div class="order-1 p-4 w-5/12">
+                                            <h3 class="mb-3 font-bold text-white">Event 1</h3>
+                                            <p class="text-sm leading-snug tracking-wide text-white">Description for Event 1.</p>
+                                        </div>
                                     </div>
 
-                                    
-                                    
+                                    <!-- Second Event -->
+                                    <div class="mb-10 flex items-center left-timeline">
+                                        <!-- Left side text -->
+                                        <div class="order-1 py-20 text-xl text-black w-5/12">
+                                            <div class="grid grid-cols-1 lg:grid-cols-1 pr-5">
+                                                <!-- Right side: Date and Event Information -->
+                                                <div class="lg:text-right">
+                                                    <h3 class="mb-1 font-bold">May - December 2022</h3>
+                                                    <h3 class="mb-1 font-bold"><span class="text-green-900">Event 1</span>,</h3>
+                                                </div>
+                                            </div>
+                                            <p class="leading-snug tracking-wide text-lg">
+                                                Description: This is a longer sentence that will dynamically adjust the position of the text to the left as the sentence length grows.
+                                            </p>
+                                        </div>
+
+                                        <!-- Middle content -->
+                                        <div class="flex order-1 bg-white shadow-xl w-40 h-40 rounded-full border-4 border-gray-400">
+                                            <img src="images/uh_red.png" alt="UH" class="object-cover max-w-full max-h-full mx-auto">
+                                        </div>
+                                    </div>
                                 </div>
 
-                                <!-- Add more timeline events as needed -->
-                                <div class="mb-20 flex items-center w-full right-timeline">
-                                    <div class="order-1"></div>
-                                    <div class="z-20 flex order-2 bg-white shadow-xl w-40 h-40 rounded-full border-4 border-gray-400">
-                                        <img src="images/uh_red.png" alt="UH Group" class="object-cover w-full h-full">
-                                    </div>
-                                    <div class="order-0 py-20 pr-10 ml-110">
-                                        <h3 class="mb-3 font-bold text-white">Event 1</h3>
-                                        <p class="text-sm leading-snug tracking-wide text-white">Description for Event 1.</p>
-                                    </div>
-                                </div>
-
+                                <!--First Event-->
                                 <div class="mb-10 flex justify-between items-center w-full left-timeline">
                                     <div class="order-1 w-5/12"></div>
                                     <div class="z-20 flex items-center order-1 bg-white shadow-xl w-40 h-40 rounded-full border-4 border-gray-400">
                                         <img src="images/kohl.png" alt="Kohl's" class="object-cover w-full h-full">
                                     </div>
-                                    <div class="order-1 py-20 w-5/12">
-                                        <h3 class="mb-3 font-bold text-white">Event 1</h3>
-                                        <p class="text-sm leading-snug tracking-wide text-white">Description for Event 1.</p>
+                                    <div class="order-1 py-20 w-5/12 text-xl text-black">
+                                        <h3 class="mb-1 font-bold">May - December 2022</h3>
+                                        <h3 class="mb-1 font-bold"><span class="text-green-900">Kohl's</span>, Retail Sales Associate</h3>
+                                        <p class="leading-snug tracking-wide text-lg">Initially hired for the curbside pick-up position, my time at Kohl's consisted of
+                                            balancing time with other positions to support the severe understaffing. This helped me improve in my ability to work in a group setting while under pressure. 
+                                            In doing so, this fostered my ability to manage time and flexibilty having to balance Amazon returns, both in-store and curbside pick-ups, and many other tasks.
+                                        </p>
                                     </div>
                                 </div>
 
