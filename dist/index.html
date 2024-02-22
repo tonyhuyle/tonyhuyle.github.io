@@ -11,6 +11,11 @@
     <script src="main.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 
 <!--Welcome Screen-->
@@ -19,7 +24,7 @@
         <!--Header-->
         <header id = "bg" class="bg-green-900 fixed w-full top-0 p-7 opacity-0 transition-opacity duration-300 ease-in-out bg-transparent z-30">
         </header>
-        <header id = "header" class="fixed opacity-100 container flex px-7 mt-[-0.3rem] z-40">
+        <header id ="header" class="fixed opacity-100 container flex px-7 mt-[-0.3rem] z-40">
             <div class= "text-black font-bold">
                 <h1 class="fixed text-3xl animate__animated animate__fadeInLeft">Tony Le</h1>
             </div>
@@ -30,43 +35,10 @@
                         </svg>
                     </button>
                     <nav id="menu" class="hidden lg:flex lg:items-center lg:space-x-20 text-2xl text-white font-bold animate__animated animate__fadeInRight">
-                        <button id = "Home" class="hover:text-yellow-500 transition">
-                            Home
-                            <script>
-                                feather.replace();
-                                document.getElementById('Home').addEventListener('click', function() {
-                                    document.getElementById('section1').scrollIntoView({ behavior: 'smooth' });
-                                });
-                              </script>
-
-                        </button>
-                        <button id = "Projects" class="hover:text-yellow-500 transition">
-                            Projects
-                            <script>
-                                feather.replace();
-                                document.getElementById('Projects').addEventListener('click', function() {
-                                    document.getElementById('section2').scrollIntoView({ behavior: 'smooth' });
-                                });
-                              </script>
-                        </button>
-                        <button id = "Experiences" class="hover:text-yellow-500 transition">
-                            Experiences
-                            <script>
-                                feather.replace();
-                                document.getElementById('Experiences').addEventListener('click', function() {
-                                    document.getElementById('section3').scrollIntoView({ behavior: 'smooth' });
-                                });
-                              </script>
-                        </button>
-                        <button id = "Contact" class="hover:text-yellow-500 transition">
-                            Contact
-                            <script>
-                                feather.replace();
-                                document.getElementById('Contact').addEventListener('click', function() {
-                                    document.getElementById('section4').scrollIntoView({ behavior: 'smooth' });
-                                });
-                              </script>
-                        </button>
+                        <a href="#section1" class="hover:text-yellow-500 transition">Home</a>
+                        <a href="#section2" class="hover:text-yellow-500 transition">Projects</a>
+                        <a href="#section3" class="hover:text-yellow-500 transition">Experience</a>
+                        <a href="#section4" class="hover:text-yellow-500 transition">Contact</a>
                     </nav>
                 </div>
             </div>
