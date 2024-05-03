@@ -18,62 +18,62 @@
     </style>
 </head> 
 
-<!--Welcome Screen-->
-<body class="bg-gradient-to-b from-teal-900 to-green-400 h-screen bg-no-repeat bg-cover" id = "Home">
-    <nav class= "py-4 flex">
-        <!--Header-->
-        <header id = "bg" class="bg-green-900 fixed w-full top-0 p-7 opacity-0 transition-opacity duration-300 ease-in-out bg-transparent z-30">
-        </header>
-        <header id ="header" class="fixed opacity-100 container flex px-7 mt-[-0.3rem] z-40">
-            <div class= "text-black font-bold">
-                <h1 class="fixed text-3xl animate__animated animate__fadeInLeft">Tony Le</h1>
-            </div>
-                <div class="fixed top-0 right-0 p-4">
-                    <button id="menu-toggle" class="lg:hidden">
-                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                    </button>
-                    <nav id="menu" class="hidden lg:flex lg:items-center lg:space-x-20 text-2xl text-white font-bold animate__animated animate__fadeInRight">
-                        <a href="#Home" class="hover:text-yellow-500 transition">Home</a>
-                        <a href="#Projects" class="hover:text-yellow-500 transition">Projects</a>
-                        <a href="#Experience" class="hover:text-yellow-500 transition">Experience</a>
-                        <a href="#Contact" class="hover:text-yellow-500 transition">Contact</a>
-                    </nav>
+    <!--Welcome Screen-->
+    <body class="bg-gradient-to-b from-teal-900 to-green-400 h-screen bg-no-repeat bg-cover" id = "Home">
+        <nav class= "py-4 flex">
+            <!--Header-->
+            <header id = "bg" class="bg-green-900 fixed w-full top-0 p-7 opacity-0 transition-opacity duration-300 ease-in-out bg-transparent z-30">
+            </header>
+            <header id ="header" class="fixed opacity-100 container flex px-7 mt-[-0.3rem] z-40">
+                <div class= "text-black font-bold">
+                    <h1 class="fixed text-3xl animate__animated animate__fadeInLeft">Tony Le</h1>
                 </div>
-            </div>
-            <script src="main.js"></script>
-        </header>
-    </nav>
+                    <div class="fixed top-0 right-0 p-4">
+                        <button id="menu-toggle" class="lg:hidden">
+                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                            </svg>
+                        </button>
+                        <nav id="menu" class="hidden lg:flex lg:items-center lg:space-x-20 text-2xl text-white font-bold animate__animated animate__fadeInRight">
+                            <a href="#Home" class="hover:text-yellow-500 transition">Home</a>
+                            <a href="#Projects" class="hover:text-yellow-500 transition">Projects</a>
+                            <a href="#Experience" class="hover:text-yellow-500 transition">Experience</a>
+                            <a href="#Contact" class="hover:text-yellow-500 transition">Contact</a>
+                        </nav>
+                    </div>
+                </div>
+                <script src="main.js"></script>
+            </header>
+        </nav>
 
-    <div>
-        <div class="min-h-screen flex flex-col items-center justify-center font-bold text-white animate__animated animate__fadeIn" style="animation-duration: 3s;">
-            <h1 class="text-5xl md:text-6xl text-center">Hi, I'm Tony Le</h1>
-        
-            <div class="mt-8 flex flex-row items-center justify-center md:justify-between">
-                <a href="https://www.linkedin.com/in/tony-le-3b148a244/" target="_blank" class="mt-4 md:mt-0 mx-8"><i data-feather="linkedin"></i></a>
-                <a href="https://github.com/tonyhuyle" target="_blank" class="mt-4 md:mt-0 mx-8"><i data-feather="github"></i></a>
-                <a href="#" target="_blank" class="mt-4 md:mt-0 mx-8"><i data-feather="book-open"></i></a>
-            </div>
-        
-            <script>
-                feather.replace();
-            </script>
-        </div>
-        <div class="flex flex-col items-center font-bold text-white animate__animated animate__fadeIn" style="animation-duration: 3s;">
-            <div class="relative bottom-20 flex justify-center">
-                <button id = "downButton" class= "text-lg">
-                    <i data-feather="chevrons-down"></i>
-                </button>
+        <div>
+            <div class="min-h-screen flex flex-col items-center justify-center font-bold text-white animate__animated animate__fadeIn" style="animation-duration: 3s;">
+                <h1 class="text-5xl md:text-6xl text-center">Hi, I'm Tony Le</h1>
+            
+                <div class="mt-8 flex flex-row items-center justify-center md:justify-between">
+                    <a href="https://www.linkedin.com/in/tonyhuyle/" target="_blank" class="mt-4 md:mt-0 mx-8"><i data-feather="linkedin"></i></a>
+                    <a href="https://github.com/tonyhuyle" target="_blank" class="mt-4 md:mt-0 mx-8"><i data-feather="github"></i></a>
+                    <a href="Resume.pdf" target="_blank" rel="noopener" class="mt-4 md:mt-0 mx-8"><i data-feather="book-open"></i></a>
+                </div>
+            
                 <script>
-                    feather.replace();
-                    document.getElementById('downButton').addEventListener('click', function() {
-                        document.getElementById('Projects').scrollIntoView({ behavior: 'smooth' });
-                    });
-                  </script>
+                    feather.replace({width: '2em', height: '2em'})
+                </script>
             </div>
-        </div>     
-    </div>
+            <div class="flex flex-col items-center font-bold text-white animate__animated animate__fadeIn" style="animation-duration: 3s;">
+                <div class="relative bottom-20 flex justify-center">
+                    <button id = "downButton" class= "text-lg">
+                        <i data-feather="chevrons-down"></i>
+                    </button>
+                    <script>
+                        feather.replace({width: '2em', height: '2em'})
+                        document.getElementById('downButton').addEventListener('click', function() {
+                        document.getElementById('Projects').scrollIntoView({ behavior: 'smooth' });
+                        });
+                    </script>
+                </div>
+            </div>     
+        </div>
     </body>
     
 
@@ -85,34 +85,100 @@
               <h3 class="mb-4 font-bold text-4xl">Personal Projects</h3>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 w-full max-w-screen-xl mx-auto">
-                    <img src="images/2D.jpg" alt="2D Game" class="cursor-pointer" onclick="openModal()"/>
-                    <img src="images/Weather_App.png" alt="Weather App"/>
-                    <img src="images/Website.png" alt="Website"/>
+                    <img src="images/2D.jpg" alt="2D Game" class="cursor-pointer hover:opacity-25" onclick="openModal('Modal1')"/>
+                    <img src="images/Weather_App.png" alt="Weather App" class="cursor-pointer hover:opacity-25" onclick="openModal('Modal2')"/>
+                    <img src="images/FuelQuote.png" alt="Fuel" class="cursor-pointer hover:opacity-25" onclick="openModal('Modal3')"/>
                 </div>
 
                                 <!-- Modal -->
-                    <div id="imageModal" class="fixed inset-0 overflow-y-auto hidden bg-black bg-opacity-75">
+                    <div id="Modal1" class="fixed inset-0 overflow-y-auto hidden bg-black bg-opacity-75 z-50">
                         <div class="flex items-center justify-center min-h-screen">
-                            <div class="bg-white p-8 max-w-md mx-auto">
-                                <!-- Modal content -->
-                                <h1 class="font-bold text-center text-4xl">2D Game</h1>
-                                <h2 class="py-2">A functional 2D platformer game with two opposing characters capable of running, walking, attacking, and idling</h2>
+                            <div class="bg-white p-8 max-w-5xl relative">
+                                <!-- Modal content -->                          
+                                <button class="absolute top-0 right-0 text-black mt-4 mr-2" onclick="closeModal('Modal1')"><i data-feather="x"></i></button>                           
+                                <h1 class="font-bold text-center text-4xl mb-5">2D Game</h1>
+                                <img src="images/2DA.png" alt="2D Game" class="modal-image">
+                                <h2 class="py-2 text-center">A functional 2D platformer game with two opposing characters capable of running, walking, attacking, and idling. <br> Using keyboard and 
+                                mouse inputs, the characters will move left and right or attack. With no inputs the characters will stand with an idle animation</h2>
+                                <div>
+                                <h3 class="flex items-center text-gray-500"><i data-feather="folder" class="mr-2"></i> Unity, C#, Clip Studio </h3>
+
+                                </div>
                                 <div class="mt-2 flex justify-center">
-                                    <button class="mt-4 bg-black text-white px-4 py-2 rounded-md" onclick="closeModal()">Close</button>
+                                    <button class="mt-4 bg-black text-white px-4 py-2 rounded-md" onclick="closeModal('Modal1')">Close</button>
                                 </div>
                             </div>
                         </div>
+                        <script>
+                            feather.replace({width: '2em', height: '2em'})
+                        </script>
                     </div>
+
+                    <div id="Modal2" class="fixed inset-0 overflow-y-auto hidden bg-black bg-opacity-75 z-50">
+                        <div class="flex items-center justify-center min-h-screen">
+                            <div class="bg-white p-8 mx-w-5xl relative">
+                                <!-- Modal content -->                          
+                                <button class="absolute top-0 right-0 text-black mt-4 mr-2" onclick="closeModal('Modal2')"><i data-feather="x"></i></button>                           
+                                <h1 class="font-bold text-center text-4xl mb-5">Weather App</h1>
+                                <img src="images/Weather.png" alt="Weather App" class="modal-image">
+                                <h2 class="py-2 text-center">Website that allows users to input their desired location in order to obtain information about the location. <br> This includes
+                                    temperature, humidity, wind speed, and sky conditions. The background of the site changes to correlate with each location searched.
+                                </h2>
+                                <h3 class="flex items-center text-gray-500"><i data-feather="folder" class="mr-2"></i>HTML, Javascript, CSS</h3>
+                                <div class="mt-2 flex justify-center">
+                                    <button class="mt-4 bg-black text-white px-4 py-2 rounded-md" onclick="closeModal('Modal2')">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                        <script>
+                            feather.replace({width: '2em', height: '2em'})
+                        </script>
+                    </div>
+
+                    <div id="Modal3" class="fixed inset-0 overflow-y-auto hidden bg-black bg-opacity-75 z-50">
+                        <div class="flex items-center justify-center min-h-screen">
+                            <div class="bg-white p-8 mx-w-5xl relative">
+                                <!-- Modal content -->                          
+                                <button class="absolute top-0 right-0 text-black mt-4 mr-2" onclick="closeModal('Modal3')"><i data-feather="x"></i></button>                           
+                                <h1 class="font-bold text-center text-4xl mb-5">Fuel Quote</h1>
+                                <img src="images/Form.png" alt="Fuel Form" class="modal-image"> <br>
+                                <img src="images/Table.png" alt="Fuel Table" class="modal-image">
+                                <h2 class="py-2 text-center">Website where consumers can create an account that is stored into a database and obtain fuel pricing information. <br>
+                                    The user can fill out the profile information to save it in the database. Filling ou tthe new quote form returns the pricing information and stores <br> it
+                                    into the table in view quotes.
+                                </h2>
+                                <h3 class="flex items-center text-gray-500"><i data-feather="folder" class="mr-2"></i>HTML, Javascript, Tailwind, Postgres, PgAdmin, XAMMP, PHP</h3>
+                                <div class="mt-2 flex justify-center">
+                                    <button class="mt-4 bg-black text-white px-4 py-2 rounded-md" onclick="closeModal('Modal3')">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                        <script>
+                            feather.replace({width: '2em', height: '2em'})
+                        </script>
+                    </div>
+
                 </div>
 
                 <script>
                     // JavaScript functions to open and close the modal
-                    function openModal() {
-                        document.getElementById('imageModal').classList.remove('hidden');
+                    function openModal(elementId) {
+                        var modal = document.getElementById(elementId)
+                        if (modal) {
+                            modal.classList.remove('hidden');
+                        }
+                        else {
+                            console.error("Modal with ID " + elementId + " not found.");
+                        }
                     }
 
-                    function closeModal() {
-                        document.getElementById('imageModal').classList.add('hidden');
+                    function closeModal(elementId) {
+                        var modal = document.getElementById(elementId);
+                        if (modal) {
+                            modal.classList.add('hidden');
+                        } else {
+                            console.error("Modal with ID " + elementId + " not found.");
+                        }
                     }
                 </script>
 
@@ -121,15 +187,13 @@
                 <a href="https://github.com/tonyhuyle" target="_blank" class="px-10 py-5 bg-gray-700 text-white rounded-md font-bold text-2xl">Visit My Github <ion-icon size="medium" name="logo-github"></ion-icon></a>
                  </div>
             </div>
-
-
         </div>
 
         <!-- Timeline -->
         <div id="Experience" class="bg-gray-200 w-full flex flex-col min-h-screen" style="margin-top: 50px;">
             <div class="text-center py-36">
-                <h2 class="section-heading mb-2 text-6xl">Timeline</h2>
-                <p class="py-5 text-lg">A short summary of my experiences</p>
+                <h2 class="section-heading mb-2 text-2xl font-bold text-yellow-500">Timeline</h2>
+                <p class="py-5 text-4xl font-bold">A short summary of my experiences</p>
             </div>
         
             <div class="max-w-screen-lg mx-auto relative">
@@ -143,9 +207,9 @@
                         <img src="images/database.png" alt="Database" class="object-cover w-full h-full">
                     </div>
                     <div class="order-2 md:order-3 p-4 md:w-5/12 text-black">
-                        <h3 class="mb-1 font-bold text-xl">2024 - Present</h3>
+                        <h3 class="mb-1 font-bold text-xl">January - April 2024</h3>
                         <h3 class="mb-1 font-bold text-xl"><span class="text-green-900">Software Design</span>, Application to Predict Rate of Fuel</h3>
-                        <p class="leading-snug tracking-wide text-lg">For the spring semester, I am working with a group to create an application consisting
+                        <p class="leading-snug tracking-wide text-lg">For Spring of 2024, I worked with a group to create an application consisting
                             of a frontend and backend to predict the rate of fuel based on client info, gallons requested, and company profit margin.
                         </p>
                     </div>
@@ -161,7 +225,7 @@
                             </div>
                         </div>
                         <p class="leading-snug tracking-wide text-lg px-5">
-                            For the fall semester, I worked closely with a group in order to complete a project analyzing data involving attributing factors to the 
+                            For this project I worked closely with a group in order to complete a project analyzing data involving attributing factors to the 
                             availability and usage of electric vehicles. In doing so, we worked with multiple linear regression and regression tree methods.
                         </p>
                     </div>
@@ -207,13 +271,33 @@
                 </div>
             </div>
         </div>
-        
 
                 <!--Contact-->
-                <section id="Contact" class="bg-black mx-auto">
-                    <header class="col-lg-12 text-center py-24 text-4xl font-bold text-white">Contact</header>
-
+                <section id="Contact" class="bg-black py-28">
+                    <header class="text-center mb-4 text-2xl font-bold text-yellow-500">Contact</header>
+                    <h1 class="text-center text-4xl font-bold text-white">I'd Love To Connect With You</h1>
+                    <div class="py-12 grid grid-cols-3 mt-20 max-w-7xl mx-auto">
+                        <div class="flex flex-col items-center">
+                            <i class="text-white hover:text-yellow-400" data-feather="map-pin"></i>
+                            <h1 class="text-yellow-400 font-bold text-2xl mt-4">Where to find me</h1>
+                            <h2 class="text-gray-200 mt-3">Houston TX, <br> 77089 US</h2>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <i class="text-white hover:text-yellow-400" data-feather="mail"></i>
+                            <h1 class="text-yellow-400 font-bold text-2xl mt-4">Email me at</h1>
+                            <h2 class="text-gray-200 mt-3">tonyhuyle123@gmail.com</h2>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <i class="text-white hover:text-yellow-400" data-feather="linkedin"></i>
+                            <h1 class="text-yellow-400 font-bold text-2xl mt-4">LinkedIn</h1>
+                            <a href="https://www.linkedin.com/in/tonyhuyle/" target="_blank" class="text-blue-400 mt-3 underline">LinkedIn Profile</a>
+                        </div>
+                    </div>
+                    
+                    <script>
+                        feather.replace({width: '2em', height: '2em'})
+                    </script>
 
                 </section>
-        
+
 </html>
