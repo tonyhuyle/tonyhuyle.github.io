@@ -6,8 +6,8 @@ window.addEventListener("scroll", () => {
 
     // Adjust these values to control the fading effect.
     const startFadingAt = 100;  // When to start fading out the header
-    const endFadingAt = 800;    // When to fully fade out the header
-    const fadeInThreshold = 900; // When to start fading the header back in
+    const endFadingAt = 600;    // When to fully fade out the header
+    const fadeInThreshold = 700; // When to start fading the header back in
 
     if (scrollPosition >= startFadingAt && scrollPosition <= endFadingAt) {
         const opacity = 1 - (scrollPosition - startFadingAt) / (endFadingAt - startFadingAt);
@@ -29,7 +29,7 @@ const bg = document.getElementById("bg");
         const scrollPosition = window.scrollY;
 
         console.log("Scroll position: " + scrollPosition);
-        const startFadeIn = 900;
+        const startFadeIn = 800;
         if(scrollPosition >= startFadeIn) {
             console.log("Fading in...");
             bg.classList.remove("opacity-0")
