@@ -18,7 +18,7 @@
     </style>
 </head> 
 
-    <!--Welcome Screen-->
+<!--Welcome Screen-->
     <body class="bg-gradient-to-b from-teal-900 to-green-400 h-screen bg-no-repeat bg-cover" id = "Home">
         <nav class= "py-4 flex">
             <!--Header-->
@@ -78,9 +78,9 @@
                 <h1 class="text-5xl md:text-6xl text-center">Hi, I'm Tony Le</h1>
             
                 <div class="mt-8 flex flex-row items-center justify-center md:justify-between">
-                    <a href="https://www.linkedin.com/in/tonyhuyle/" target="_blank" class="mt-4 md:mt-0 mx-8"><i data-feather="linkedin"></i></a>
-                    <a href="https://github.com/tonyhuyle" target="_blank" class="mt-4 md:mt-0 mx-8"><i data-feather="github"></i></a>
-                    <a href="Resume.pdf" target="_blank" rel="noopener" class="mt-4 md:mt-0 mx-8"><i data-feather="book-open"></i></a>
+                    <a href="https://www.linkedin.com/in/tonyhuyle/" target="_blank" class="hover:text-gray-300 mt-4 md:mt-0 mx-8"><i data-feather="linkedin"></i></a>
+                    <a href="https://github.com/tonyhuyle" target="_blank" class="hover:text-gray-300 mt-4 md:mt-0 mx-8"><i data-feather="github"></i></a>
+                    <a href="Resume.pdf" target="_blank" rel="noopener" class="hover:text-gray-300 mt-4 md:mt-0 mx-8"><i data-feather="book-open"></i></a>
                 </div>
             
                 <script>
@@ -89,7 +89,7 @@
             </div>
             <div class="flex flex-col items-center font-bold text-white animate__animated animate__fadeIn" style="animation-duration: 3s;">
                 <div class="relative bottom-20 flex justify-center">
-                    <button id = "downButton" class= "text-lg">
+                    <button id = "downButton" class= "hover:text-gray-300 text-lg">
                         <i data-feather="chevrons-down"></i>
                     </button>
                     <script>
@@ -104,7 +104,7 @@
     </body>
     
 
-    <!-- Portfolio -->
+<!-- Portfolio -->
     <section class="content-section bg-white min-h-screen " id="projects">
         <div id= "Projects" class="py-20">
             <div class="flex flex-col items-center">
@@ -164,14 +164,15 @@
 
                     <div id="Modal3" class="fixed inset-0 overflow-y-auto hidden bg-black bg-opacity-75 z-50">
                         <div class="flex items-center justify-center min-h-screen">
-                            <div class="bg-white p-8 mx-w-5xl relative">
+                            <div class="bg-white p-8 max-w-5xl w-auto relative">
                                 <!-- Modal content -->                          
                                 <button class="absolute top-0 right-0 text-black mt-4 mr-2" onclick="closeModal('Modal3')"><i data-feather="x"></i></button>                           
                                 <h1 class="font-bold text-center text-4xl mb-5">Fuel Quote</h1>
-                                <img src="images/Form.png" alt="Fuel Form" class="modal-image"> <br>
-                                <img src="images/Table.png" alt="Fuel Table" class="modal-image">
-                                <h2 class="py-2 text-center">Website where consumers can create an account that is stored into a database and obtain fuel pricing information. <br>
-                                    The user can fill out the profile information to save it in the database. Filling ou tthe new quote form returns the pricing information and stores <br> it
+                                <img src="images/Form.png" alt="Fuel Form" class="modal-image max-w-full"> <br>
+                                <img src="images/Table.png" alt="Fuel Table" class="modal-image max-w-full mb-3">
+                                <h2 class="py-2 text-center">Website for customers or businesses to obtain fuel pricing information. Users can create an account that is stored into the 
+                                    database for future login. The account creation and login processes include error handling and password hashing for security.
+                                    Customers can fill out profile information that is saved into the database for future quotes. Filling out the new quote form returns the pricing information and stores it
                                     into the table in view quotes.
                                 </h2>
                                 <h3 class="flex items-center text-gray-500"><i data-feather="folder" class="mr-2"></i>HTML, Javascript, Tailwind, Postgres, PgAdmin, XAMMP, PHP</h3>
@@ -210,13 +211,13 @@
                 </script>
 
                 <h4 class="font-bold text-center text-3xl mt-[10rem]"> For more information... </h4>
-                <div class="text-center py-5">
-                <a href="https://github.com/tonyhuyle" target="_blank" class="px-10 py-5 bg-gray-700 text-white rounded-md font-bold text-2xl">Visit My Github <ion-icon size="medium" name="logo-github"></ion-icon></a>
+                <div class="text-center py-8">
+                <a href="https://github.com/tonyhuyle" target="_blank" class="hover:text-gray-300 px-10 py-5 bg-gray-700 text-white rounded-md font-bold text-2xl">Visit My Github <ion-icon size="medium" name="logo-github"></ion-icon></a>
                  </div>
             </div>
         </div>
 
-        <!-- Timeline -->
+<!-- Timeline -->
         <div id="Experience" class="bg-gray-200 w-full flex flex-col min-h-screen" style="margin-top: 50px;">
             <div class="text-center py-36">
                 <h2 class="section-heading mb-2 text-2xl font-bold text-yellow-500">Timeline</h2>
@@ -299,7 +300,7 @@
             </div>
         </div>
 
-                <!--Contact-->
+<!--Contact-->
                 <section id="Contact" class="bg-black py-28">
                     <header class="text-center mb-4 text-2xl font-bold text-yellow-500">Contact</header>
                     <h1 class="text-center text-4xl font-bold text-white">I'd Love To Connect With You</h1>
