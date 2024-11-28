@@ -80,7 +80,7 @@
                 <div class="mt-8 flex flex-row items-center justify-center md:justify-between">
                     <a href="https://www.linkedin.com/in/tonyhuyle/" target="_blank" class="hover:text-gray-300 mt-4 md:mt-0 mx-8"><i data-feather="linkedin"></i></a>
                     <a href="https://github.com/tonyhuyle" target="_blank" class="hover:text-gray-300 mt-4 md:mt-0 mx-8"><i data-feather="github"></i></a>
-                    <a href="Resume.pdf" target="_blank" rel="noopener" class="hover:text-gray-300 mt-4 md:mt-0 mx-8"><i data-feather="book-open"></i></a>
+                    <a href="Tony_Le_Resume_CS.pdf" target="_blank" rel="noopener" class="hover:text-gray-300 mt-4 md:mt-0 mx-8"><i data-feather="book-open"></i></a>
                 </div>
             
                 <script>
@@ -111,10 +111,11 @@
               <h2 class="text-secondary mb-4 font-bold text-yellow-500 text-2xl">Portfolio</h2>
               <h3 class="mb-4 font-bold text-4xl">Personal Projects</h3>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 w-full max-w-screen-xl mx-auto">
-                    <img src="images/2D.jpg" alt="2D Game" class="cursor-pointer hover:opacity-25" onclick="openModal('Modal1')"/>
-                    <img src="images/Weather_App.png" alt="Weather App" class="cursor-pointer hover:opacity-25" onclick="openModal('Modal2')"/>
-                    <img src="images/FuelQuote.png" alt="Fuel" class="cursor-pointer hover:opacity-25" onclick="openModal('Modal3')"/>
+                <div class="grid grid-rows-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 w-full max-w-screen-xl mx-auto">
+                    <img src="images/2D.jpg" alt="2D Game" class="cursor-pointer hover:opacity-25 object-cover w-full h-full" onclick="openModal('Modal1')"/>
+                    <img src="images/Weather_App.png" alt="Weather App" class="cursor-pointer hover:opacity-25 object-cover w-full h-full" onclick="openModal('Modal2')"/>
+                    <img src="images/FuelQuote.png" alt="Fuel" class="cursor-pointer hover:opacity-25 object-cover w-full h-full" onclick="openModal('Modal3')"/>
+                    <img src="images/fish_recog.png" alt="Fish" class="cursor-pointer hover:opacity-25" onclick="openModal('Modal4')"/>
                 </div>
 
                                 <!-- Modal -->
@@ -186,6 +187,51 @@
                         </script>
                     </div>
 
+                    <div id="Modal4" class="fixed inset-0 overflow-y-auto hidden bg-black bg-opacity-75 z-50">
+                        <div class="flex items-center justify-center min-h-screen">
+                            <div class="bg-white p-8 max-w-5xl w-auto relative">
+                                <!-- Modal content -->                          
+                                <button class="absolute top-0 right-0 text-black mt-4 mr-2" onclick="closeModal('Modal4')"><i data-feather="x"></i></button>                           
+                                <h1 class="font-bold text-center text-4xl mb-5">Galveston Fish Recognition</h1>
+                                <img src="images/flounder.png" alt="Flounder" class="modal-image max-w-full mx-auto"> <br>
+                                <img src="images/speckled.png" alt="Trout" class="modal-image max-w-full mb-3 mx-auto">
+                                <h2 class="py-2 text-center">
+                                    Fish Recognition Model created with the goal of identifying common species of fish that originate from
+                                    the Galveston area. The model is trained on 10 different species that include the following:
+                                </h2>
+                                
+                                <div class="flex justify-center">
+                                    <ul class="list-disc pl-5">
+                                        <li>Red Drum</li>
+                                        <li>Black Drum</li>
+                                        <li>Crevalle Jack</li>
+                                        <li>Southern Flounder</li>
+                                        <li>Speckled Trout</li>
+                                        <li>Southern Kingfish</li>
+                                        <li>Atlantic Croaker</li>
+                                        <li>Sheepshead</li>
+                                        <li>Ladyfish</li>
+                                        <li>Gafftopsail Catfish</li>
+                                    </ul>
+                                </div>
+
+                                <h2 class="py-2 text-center">
+                                    Model was trained via transfer learning using the MobileNetV2 model as a base and adapting the model specifically for fish classification.
+                                    The dataset images are preprocessed and normalized before being split into training and testing sets. The model is fine-tuned with data augmentation,
+                                    drop out layers, batch normalization, and a custom learning rate scheduler. It also uses early stopping and learning rate reduction 
+                                    callbacks for efficient training. It has proven to effectively identify the desired fish species.
+                                </h2>
+                                <h3 class="flex items-center text-gray-500"><i data-feather="folder" class="mr-2"></i>HTML, Javascript, Python, Tensorflow, NumPy, Matplotlib, Pandas</h3>
+                                <div class="mt-2 flex justify-center">
+                                    <button class="mt-4 bg-black text-white px-4 py-2 rounded-md" onclick="closeModal('Modal4')">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                        <script>
+                            feather.replace({width: '2em', height: '2em'})
+                        </script>
+                    </div>
+
                 </div>
 
                 <script>
@@ -210,7 +256,7 @@
                     }
                 </script>
 
-                <h4 class="font-bold text-center text-3xl mt-[10rem]"> For more information... </h4>
+                <h4 class="font-bold text-center text-3xl mt-16"> For more information... </h4>
                 <div class="text-center py-8">
                 <a href="https://github.com/tonyhuyle" target="_blank" class="hover:text-gray-300 px-10 py-5 bg-gray-700 text-white rounded-md font-bold text-2xl">Visit My Github <ion-icon size="medium" name="logo-github"></ion-icon></a>
                  </div>
@@ -318,7 +364,7 @@
                         <div class="flex flex-col items-center">
                             <i class="text-white mt-10" data-feather="linkedin"></i>
                             <h1 class="text-yellow-400 font-bold text-2xl mt-4">LinkedIn</h1>
-                            <a href="https://www.linkedin.com/in/tonyhuyle/" target="_blank" class="text-blue-400 mt-3 underline">LinkedIn Profile</a>
+                            <a href="https://www.linkedin.com/in/tonyhuyle/" target="_blank" class="text-blue-400 mt-3 underline hover:text-gray-200">LinkedIn Profile</a>
                         </div>
                     </div>
                     
