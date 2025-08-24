@@ -111,82 +111,68 @@
               <h2 class="text-secondary mb-4 font-bold text-yellow-500 text-2xl">Portfolio</h2>
               <h3 class="mb-4 font-bold text-4xl">Personal Projects</h3>
 
-                <div class="grid grid-rows-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 w-full max-w-screen-xl mx-auto">
-                    <img src="images/2D.jpg" alt="2D Game" class="cursor-pointer hover:opacity-25 object-cover w-full h-full" onclick="openModal('Modal1')"/>
-                    <img src="images/Weather_App.png" alt="Weather App" class="cursor-pointer hover:opacity-25 object-cover w-full h-full" onclick="openModal('Modal2')"/>
-                    <img src="images/FuelQuote.png" alt="Fuel" class="cursor-pointer hover:opacity-25 object-cover w-full h-full" onclick="openModal('Modal3')"/>
-                    <img src="images/fish_recog.png" alt="Fish" class="cursor-pointer hover:opacity-25" onclick="openModal('Modal4')"/>
+                <!-- Project Grid -->
+                <div id="projectsGrid" class="grid grid-rows-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 w-full max-w-screen-xl mx-auto flex flex-wrap flex-row-reverse">
+                    <!-- Newest Project First: Fish Recognition Model -->
+                    <img src="images/fish_recog.png" alt="Fish Recognition Model" class="cursor-pointer hover:opacity-25 object-cover w-full h-full" onclick="openModal('Modal4')" />
+                    <!-- Fuel Quote System -->
+                    <img src="images/FuelQuote.png" alt="Fuel Quote System" class="cursor-pointer hover:opacity-25 object-cover w-full h-full" onclick="openModal('Modal3')" />
+                    <!-- Weather App -->
+                    <img src="images/Weather_App.png" alt="Weather App" class="cursor-pointer hover:opacity-25 object-cover w-full h-full" onclick="openModal('Modal2')" />
+                    <!-- 2D Game -->
+                    <img src="images/2D.jpg" alt="2D Game" class="cursor-pointer hover:opacity-25 object-cover w-full h-full" onclick="openModal('Modal1')" />
                 </div>
 
-                                <!-- Modal -->
-                    <div id="Modal1" class="fixed inset-0 overflow-y-auto hidden bg-black bg-opacity-75 z-50">
-                        <div class="flex items-center justify-center min-h-screen">
-                            <div class="bg-white p-8 max-w-5xl relative">
-                                <!-- Modal content -->                          
-                                <button class="absolute top-0 right-0 text-black mt-4 mr-2" onclick="closeModal('Modal1')"><i data-feather="x"></i></button>                           
-                                <h1 class="font-bold text-center text-4xl mb-5">2D Game</h1>
-                                <img src="images/2DA.png" alt="2D Game" class="modal-image">
-                                <h2 class="py-2 text-center">A functional 2D platformer game with two opposing characters capable of running, walking, attacking, and idling. <br> Using keyboard and 
-                                mouse inputs, the characters will move left and right or attack. With no inputs the characters will stand with an idle animation</h2>
-                                <div>
-                                <h3 class="flex items-center text-gray-500"><i data-feather="folder" class="mr-2"></i> Unity, C#, Clip Studio </h3>
-
-                                </div>
-                                <div class="mt-2 flex justify-center">
-                                    <button class="mt-4 bg-black text-white px-4 py-2 rounded-md" onclick="closeModal('Modal1')">Close</button>
-                                </div>
-                            </div>
+                <!-- Modal 1: 2D Game -->
+                <div id="Modal1" class="fixed inset-0 overflow-y-auto hidden bg-black bg-opacity-75 z-50">
+                    <div class="flex items-center justify-center min-h-screen">
+                    <div class="bg-white p-8 max-w-5xl relative">
+                        <button class="absolute top-0 right-0 text-black mt-4 mr-2" onclick="closeModal('Modal1')"><i data-feather="x"></i></button>
+                        <h1 class="font-bold text-center text-4xl mb-5">2D Platformer Game</h1>
+                        <img src="images/2DA.png" alt="2D Game" class="modal-image">
+                        <h2 class="py-2 text-center">A functional 2D platformer featuring two playable characters with running, walking, attacking, and idle animations controlled via keyboard and mouse inputs.</h2>
+                        <h3 class="flex items-center text-gray-500"><i data-feather="folder" class="mr-2"></i> Unity · C# · Clip Studio</h3>
+                        <div class="mt-4 flex justify-center">
+                        <button class="bg-black text-white px-4 py-2 rounded-md" onclick="closeModal('Modal1')">Close</button>
                         </div>
-                        <script>
-                            feather.replace({width: '2em', height: '2em'})
-                        </script>
                     </div>
+                    </div>
+                </div>
 
-                    <div id="Modal2" class="fixed inset-0 overflow-y-auto hidden bg-black bg-opacity-75 z-50">
-                        <div class="flex items-center justify-center min-h-screen">
-                            <div class="bg-white p-8 mx-w-5xl relative">
-                                <!-- Modal content -->                          
-                                <button class="absolute top-0 right-0 text-black mt-4 mr-2" onclick="closeModal('Modal2')"><i data-feather="x"></i></button>                           
-                                <h1 class="font-bold text-center text-4xl mb-5">Weather App</h1>
-                                <img src="images/Weather.png" alt="Weather App" class="modal-image">
-                                <h2 class="py-2 text-center">Website that allows users to input their desired location in order to obtain information about the location. <br> This includes
-                                    temperature, humidity, wind speed, and sky conditions. The background of the site changes to correlate with each location searched.
-                                </h2>
-                                <h3 class="flex items-center text-gray-500"><i data-feather="folder" class="mr-2"></i>HTML, Javascript, CSS</h3>
-                                <div class="mt-2 flex justify-center">
-                                    <button class="mt-4 bg-black text-white px-4 py-2 rounded-md" onclick="closeModal('Modal2')">Close</button>
-                                </div>
-                            </div>
+                <!-- Modal 2: Weather App -->
+                <div id="Modal2" class="fixed inset-0 overflow-y-auto hidden bg-black bg-opacity-75 z-50">
+                    <div class="flex items-center justify-center min-h-screen">
+                    <div class="bg-white p-8 max-w-5xl relative">
+                        <button class="absolute top-0 right-0 text-black mt-4 mr-2" onclick="closeModal('Modal2')"><i data-feather="x"></i></button>
+                        <h1 class="font-bold text-center text-4xl mb-5">Weather App</h1>
+                        <img src="images/Weather.png" alt="Weather App" class="modal-image">
+                        <h2 class="py-2 text-center">A responsive weather app that displays temperature, humidity, wind speed, and sky conditions based on user-selected locations, with dynamic background changes.</h2>
+                        <h3 class="flex items-center text-gray-500"><i data-feather="folder" class="mr-2"></i> HTML · JavaScript · CSS</h3>
+                        <div class="mt-4 flex justify-center">
+                        <button class="bg-black text-white px-4 py-2 rounded-md" onclick="closeModal('Modal2')">Close</button>
                         </div>
-                        <script>
-                            feather.replace({width: '2em', height: '2em'})
-                        </script>
                     </div>
+                    </div>
+                </div>
 
-                    <div id="Modal3" class="fixed inset-0 overflow-y-auto hidden bg-black bg-opacity-75 z-50">
-                        <div class="flex items-center justify-center min-h-screen">
-                            <div class="bg-white p-8 max-w-5xl w-auto relative">
-                                <!-- Modal content -->                          
-                                <button class="absolute top-0 right-0 text-black mt-4 mr-2" onclick="closeModal('Modal3')"><i data-feather="x"></i></button>                           
-                                <h1 class="font-bold text-center text-4xl mb-5">Fuel Quote</h1>
-                                <img src="images/Form.png" alt="Fuel Form" class="modal-image max-w-full"> <br>
-                                <img src="images/Table.png" alt="Fuel Table" class="modal-image max-w-full mb-3">
-                                <h2 class="py-2 text-center">Website for customers or businesses to obtain fuel pricing information. Users can create an account that is stored into the 
-                                    database for future login. The account creation and login processes include error handling and password hashing for security.
-                                    Customers can fill out profile information that is saved into the database for future quotes. Filling out the new quote form returns the pricing information and stores it
-                                    into the table in view quotes.
-                                </h2>
-                                <h3 class="flex items-center text-gray-500"><i data-feather="folder" class="mr-2"></i>HTML, Javascript, Tailwind, Postgres, PgAdmin, XAMMP, PHP</h3>
-                                <div class="mt-2 flex justify-center">
-                                    <button class="mt-4 bg-black text-white px-4 py-2 rounded-md" onclick="closeModal('Modal3')">Close</button>
-                                </div>
-                            </div>
+                <!-- Modal 3: Fuel Quote System -->
+                <div id="Modal3" class="fixed inset-0 overflow-y-auto hidden bg-black bg-opacity-75 z-50">
+                    <div class="flex items-center justify-center min-h-screen">
+                    <div class="bg-white p-8 max-w-5xl relative">
+                        <button class="absolute top-0 right-0 text-black mt-4 mr-2" onclick="closeModal('Modal3')"><i data-feather="x"></i></button>
+                        <h1 class="font-bold text-center text-4xl mb-5">Fuel Quote System</h1>
+                        <img src="images/Form.png" alt="Fuel Form" class="modal-image mb-3">
+                        <img src="images/Table.png" alt="Fuel Table" class="modal-image mb-3">
+                        <h2 class="py-2 text-center">A full-stack web app where users create accounts, manage profiles, and request fuel price quotes. Implements secure authentication with password hashing and real-time price calculations.</h2>
+                        <h3 class="flex items-center text-gray-500"><i data-feather="folder" class="mr-2"></i> HTML · JavaScript · Tailwind · PHP · PostgreSQL</h3>
+                        <div class="mt-4 flex justify-center">
+                        <button class="bg-black text-white px-4 py-2 rounded-md" onclick="closeModal('Modal3')">Close</button>
                         </div>
-                        <script>
-                            feather.replace({width: '2em', height: '2em'})
-                        </script>
                     </div>
+                    </div>
+                </div>
 
+                <!-- Modal 4: Fish Recognition Model -->
                     <div id="Modal4" class="fixed inset-0 overflow-y-auto hidden bg-black bg-opacity-75 z-50">
                         <div class="flex items-center justify-center min-h-screen">
                             <div class="bg-white p-8 max-w-5xl w-auto relative">
@@ -235,25 +221,16 @@
                 </div>
 
                 <script>
-                    // JavaScript functions to open and close the modal
                     function openModal(elementId) {
-                        var modal = document.getElementById(elementId)
-                        if (modal) {
-                            modal.classList.remove('hidden');
-                        }
-                        else {
-                            console.error("Modal with ID " + elementId + " not found.");
-                        }
+                        const modal = document.getElementById(elementId);
+                        modal?.classList.remove('hidden');
                     }
 
                     function closeModal(elementId) {
-                        var modal = document.getElementById(elementId);
-                        if (modal) {
-                            modal.classList.add('hidden');
-                        } else {
-                            console.error("Modal with ID " + elementId + " not found.");
-                        }
+                        const modal = document.getElementById(elementId);
+                        modal?.classList.add('hidden');
                     }
+                    feather.replace({ width: '2em', height: '2em' });
                 </script>
 
                 <h4 class="font-bold text-center text-3xl mt-16"> For more information... </h4>
@@ -354,7 +331,7 @@
                         <div class="flex flex-col items-center sm:mb-8">
                             <i class="text-white mt-10" data-feather="map-pin"></i>
                             <h1 class="text-yellow-400 font-bold text-2xl mt-4">Where to find me</h1>
-                            <h2 class="text-gray-200 mt-3">Houston TX, <br> 77089 US</h2>
+                            <h2 class="text-gray-200 mt-3">Houston TX</h2>
                         </div>
                         <div class="flex flex-col items-center">
                             <i class="text-white mt-10" data-feather="mail"></i>
