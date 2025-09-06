@@ -115,7 +115,10 @@
 
                 <!-- Project Grid -->
                 <div id="projectsGrid" class="grid grid-rows-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 w-full max-w-screen-xl mx-auto flex flex-wrap flex-row-reverse">
-                    <!-- Newest Project First: VM IT Lab-->
+                    <!-- Newest Project First: -->
+                    <!-- Remote Lab -->
+                    <img src="images/Remote_Lab/rdc.png" alt="Rdc" class="cursor-pointer hover:opacity-25 object-cover w-full h-full" onclick="openModal('Modal6')" />
+                    <!-- VM IT Lab-->
                     <img src="images/Virtualbox_IT_Lab/server_manager.png" alt="2D Game" class="cursor-pointer hover:opacity-25 object-cover w-full h-full" onclick="openModal('Modal5')" />
                     <!--Fish Recognition Model -->
                     <img src="images/Fish/fish_recog.png" alt="Fish Recognition Model" class="cursor-pointer hover:opacity-25 object-cover w-full h-full" onclick="openModal('Modal4')" />
@@ -127,29 +130,69 @@
                     <img src="images/Platformer/2D.jpg" alt="2D Game" class="cursor-pointer hover:opacity-25 object-cover w-full h-full" onclick="openModal('Modal1')" />
                 </div>
                 
-                   <!-- Modal 5: VM IT Lab -->
-                <div id="Modal5" class="fixed inset-0 overflow-y-auto hidden bg-black bg-opacity-75 z-50">
-                    <div class="flex items-center justify-center min-h-screen">
-                    <div class="bg-white p-8 max-w-5xl relative">
-                        <button class="absolute top-0 right-0 text-black mt-4 mr-2" onclick="closeModal('Modal5')"><i data-feather="x"></i></button>
-                        <h1 class="font-bold text-center text-4xl mb-5">Virtual Machine IT Lab</h1>
-                        <h2 class="py-2 text-center">A hands-on IT lab using VirtualBox and Windows Server 2022 to simulate enterprise environments.
-                        Configured a domain controller, managed users, groups, and Organizational Units (OUs) in Active Directory,
-                        and implemented Group Policy Objects (GPOs) to enforce password policies and desktop restrictions.
-                        Automated repetitive administrative tasks by developing PowerShell scripts for creating users from CSV files
-                        and cleaning disabled accounts, streamlining identity management and improving operational efficiency.</h2><br>
-                        <img src="images/Virtualbox_IT_Lab/virtualbox.png" alt="VM" class="modal-image mb-3">
-                        <img src="images/Virtualbox_IT_Lab/password_reset.png" alt="Password Reset" class="modal-image mb-3">
-                        <img src="images/Virtualbox_IT_Lab/disabled_users.png" alt="Disabled Users" class="modal-image mb-3">
-                        <img src="images/Virtualbox_IT_Lab/powershell_csv_script.png" alt="CSV Script" class="modal-image mb-3">
-                        <img src="images/Virtualbox_IT_Lab/default_wallpaper.png" alt="Default Wallpaper" class="modal-image mb-3">
-                        <h3 class="flex items-center text-gray-500"><i data-feather="folder" class="mr-2"></i> Virtual Machine · Active Directory · Windows Server · Group Policy · PowerShell</h3>
-                        <div class="mt-4 flex justify-center">
-                        <button class="bg-black text-white px-4 py-2 rounded-md" onclick="closeModal('Modal5')">Close</button>
+                    <!-- Modal 6: Remote Lab -->
+                    <div id="Modal6" class="fixed inset-0 overflow-y-auto hidden bg-black bg-opacity-75 z-50">
+                        <div class="flex items-center justify-center min-h-screen">
+                        <div class="bg-white p-8 max-w-5xl relative">
+                            <button class="absolute top-0 right-0 text-black mt-4 mr-2" onclick="closeModal('Modal6')"><i data-feather="x"></i></button>
+                            <h1 class="font-bold text-center text-4xl mb-5">Remote Desktop Protocl Lab</h1>
+                            <h2 class="py-2 text-center">This VirtualBox remote desktop practice simulates real-world IT scenarios where administrators remotely access machines on a 
+                                domain network to perform essential management tasks. The lab covers the fundamentals of remote access,  system control, and event log 
+                                monitoring, while also including the process of connecting client machines to a domain controller. In addition, it demonstrates how to create shared folders 
+                                for resource access and apply Group Policy to manage and customize user environments, reflecting the core responsibilities of IT professionals in enterprise settings.
+                            </h2><br>
+                            <img src="images/Remote_Lab/IPv4_2.png" alt="Server VM" class="modal-image mb-3 mx-auto">
+                            <img src="images/Remote_Lab/IPv4_1.png" alt="Client VM" class="modal-image mb-3 mx-auto">
+                            <h2>To begin, both the client and server had their network settings configured to communicate on the same virtual network. The client was then joined to the serverss domain 
+                                (corp.local) by pointing its DNS to the servers IP and authenticating with domain admin credentials. Once domain-joined, the client appeared in Active Directory, 
+                                enabling Group Policy and centralized domain management. With that setup complete, Remote Desktop was enabled on both machines, and the server successfully connected to 
+                                the client via RDP using both a domain user and an administrator account. From that point, the server could manage files, run applications, and perform system configurations 
+                                on the client remotely.</h2>
+                            <img src="images/Remote_Lab/mapped_drive.png" alt="Mapped" class="modal-image mb-3 mx-auto">
+                            <img src="images/Remote_Lab/shared_drive.png" alt="Shared" class="modal-image mb-3 mx-auto">
+                            <img src="images/Remote_Lab/limit_access.png" alt="Limited" class="modal-image mb-3 mx-auto">
+                            <h2>After establishing the RDP connection, shared folders were created on the server and mapped on the client to facilitate file sharing. Users are assigned to groups 
+                                with specific permissions to control access to these shared resources. For example, if John Doe is part of the Sales department, he would be placed in the Sales group in Active Directory. 
+                                That group is granted permissions to the Sales shared folder on the server, and a Group Policy Object automatically maps that folder as a network drive 
+                                (e.g., S:) whenever Sales users log in. This way, only Sales members see and access the Sales drive, and the whole process happens automatically without manual setup on 
+                                each workstation. 
+                            </h2>
+                            <img src="images/Remote_Lab/remote_event.png" alt="Remote Logs" class="modal-image mb-3 mx-auto">
+                            <h2>Event Viewer can also be used to allow administrators to remotely view system, application, and security logs without using RDP. By enabling the necessary firewall 
+                                rules for Remote Event Log Management and ensuring the client is joined to the domain, admins can open Event Viewer on the server, connect to the client by hostname, 
+                                and pull logs directly. This approach streamlines monitoring, improves security, and avoids the need to log in to each workstation individually.
+                            </h2>
+                            <h3 class="flex items-center text-gray-500"><i data-feather="folder" class="mr-2"></i> Virtual Machine · RDP · Active Directory · Windows Server · Group Policy · PowerShell</h3>
+                            <div class="mt-4 flex justify-center">
+                            <button class="bg-black text-white px-4 py-2 rounded-md" onclick="closeModal('Modal6')">Close</button>
+                            </div>
+                        </div>
                         </div>
                     </div>
+
+                   <!-- Modal 5: VM IT Lab -->
+                    <div id="Modal5" class="fixed inset-0 overflow-y-auto hidden bg-black bg-opacity-75 z-50">
+                        <div class="flex items-center justify-center min-h-screen">
+                        <div class="bg-white p-8 max-w-5xl relative">
+                            <button class="absolute top-0 right-0 text-black mt-4 mr-2" onclick="closeModal('Modal5')"><i data-feather="x"></i></button>
+                            <h1 class="font-bold text-center text-4xl mb-5">Virtual Machine IT Lab</h1>
+                            <h2 class="py-2 text-center">A hands-on IT lab using VirtualBox and Windows Server 2022 to simulate enterprise environments.
+                            Configured a domain controller, managed users, groups, and Organizational Units (OUs) in Active Directory,
+                            and implemented Group Policy Objects (GPOs) to enforce password policies and desktop restrictions.
+                            Automated repetitive administrative tasks by developing PowerShell scripts for creating users from CSV files
+                            and cleaning disabled accounts, streamlining identity management and improving operational efficiency.</h2><br>
+                            <img src="images/Virtualbox_IT_Lab/virtualbox.png" alt="VM" class="modal-image mb-3">
+                            <img src="images/Virtualbox_IT_Lab/password_reset.png" alt="Password Reset" class="modal-image mb-3">
+                            <img src="images/Virtualbox_IT_Lab/disabled_users.png" alt="Disabled Users" class="modal-image mb-3">
+                            <img src="images/Virtualbox_IT_Lab/powershell_csv_script.png" alt="CSV Script" class="modal-image mb-3">
+                            <img src="images/Virtualbox_IT_Lab/default_wallpaper.png" alt="Default Wallpaper" class="modal-image mb-3">
+                            <h3 class="flex items-center text-gray-500"><i data-feather="folder" class="mr-2"></i> Virtual Machine · Active Directory · Windows Server · Group Policy · PowerShell</h3>
+                            <div class="mt-4 flex justify-center">
+                            <button class="bg-black text-white px-4 py-2 rounded-md" onclick="closeModal('Modal5')">Close</button>
+                            </div>
+                        </div>
+                        </div>
                     </div>
-                </div>
                 
                     <!-- Modal 4: Fish Recognition Model -->
                     <div id="Modal4" class="fixed inset-0 overflow-y-auto hidden bg-black bg-opacity-75 z-50">
