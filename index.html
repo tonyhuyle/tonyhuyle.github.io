@@ -114,100 +114,257 @@
               <h3 class="mb-4 font-bold text-4xl">Personal Projects</h3>
 
                 <!-- Project Grid -->
-                <div id="projectsGrid" class="grid grid-rows-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 w-full max-w-screen-xl mx-auto flex flex-wrap flex-row-reverse">
+                 <div id="projectsGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 w-full max-w-screen-xl mx-auto">
                     <!-- Newest Project First: -->
+                    
+                    <img src="images/network_infrasec/network-diagram.png" alt="Network Infrastructure & Security Monitoring Lab" class="cursor-pointer hover:opacity-25 object-cover  w-full h-56 md:h-64 rounded-md" onclick="openModal('Modal6')" />
                     <!-- Remote Lab -->
-                    <img src="images/Remote_Lab/rdc.png" alt="Rdc" class="cursor-pointer hover:opacity-25 object-cover w-full h-full" onclick="openModal('Modal6')" />
+                    <img src="images/Remote_Lab/rdc.png" alt="Remote Lab" class="cursor-pointer hover:opacity-25 object-cover w-full h-56 md:h-64 rounded-md" onclick="openModal('Modal5')" />
                     <!-- VM IT Lab-->
-                    <img src="images/Virtualbox_IT_Lab/server_manager.png" alt="2D Game" class="cursor-pointer hover:opacity-25 object-cover w-full h-full" onclick="openModal('Modal5')" />
+                    <img src="images/Virtualbox_IT_Lab/server_manager.png" alt="VM IT Lab" class="cursor-pointer hover:opacity-25 object-cover w-full h-56 md:h-64 rounded-md" onclick="openModal('Modal4')" />
                     <!--Fish Recognition Model -->
-                    <img src="images/Fish/fish_recog.png" alt="Fish Recognition Model" class="cursor-pointer hover:opacity-25 object-cover w-full h-full" onclick="openModal('Modal4')" />
+                    <img src="images/Fish/fish_recog.png" alt="Fish Recognition Model" class="cursor-pointer hover:opacity-25 object-cover w-full h-56 md:h-64 rounded-md" onclick="openModal('Modal3')" />
                     <!-- Fuel Quote System -->
-                    <img src="images/Fuel/FuelQuote.png" alt="Fuel Quote System" class="cursor-pointer hover:opacity-25 object-cover w-full h-full" onclick="openModal('Modal3')" />
+                    <img src="images/Fuel/FuelQuote.png" alt="Fuel Quote System" class="cursor-pointer hover:opacity-25 object-cover w-full h-56 md:h-64 rounded-md" onclick="openModal('Modal2')" />
                     <!-- Weather App -->
-                    <img src="images/Weather/Weather_App.png" alt="Weather App" class="cursor-pointer hover:opacity-25 object-cover w-full h-full" onclick="openModal('Modal2')" />
-                    <!-- 2D Game -->
-                    <img src="images/Platformer/2D.jpg" alt="2D Game" class="cursor-pointer hover:opacity-25 object-cover w-full h-full" onclick="openModal('Modal1')" />
+                    <img src="images/Weather/Weather_App.png" alt="Weather App" class="cursor-pointer hover:opacity-25 object-cover w-full h-56 md:h-64 rounded-md" onclick="openModal('Modal1')" />
                 </div>
-                
-                    <!-- Modal 6: Remote Lab -->
+
+                <!-- Modal: Network Infrastructure & Security Monitoring Lab -->
                     <div id="Modal6" class="fixed inset-0 overflow-y-auto hidden bg-black bg-opacity-75 z-50">
                         <div class="flex items-center justify-center min-h-screen">
-                        <div class="bg-white p-8 max-w-5xl relative">
-                            <button class="absolute top-0 right-0 text-black mt-4 mr-2" onclick="closeModal('Modal6')"><i data-feather="x"></i></button>
-                            <h1 class="font-bold text-center text-4xl mb-5">Remote Desktop Protocol Lab</h1>
-                            <h2 class="py-2 text-center">This VirtualBox remote desktop practice simulates real-world IT scenarios where administrators remotely access machines on a 
-                                domain network to perform essential management tasks. The lab covers the fundamentals of remote access,  system control, and event log 
-                                monitoring, while also including the process of connecting client machines to a domain controller. In addition, it demonstrates how to create shared folders 
-                                for resource access and apply Group Policy to manage and customize user environments, reflecting the core responsibilities of IT professionals in enterprise settings.
-                            </h2><br>
-                            <img src="images/Remote_Lab/IPv4_2.png" alt="Server VM" class="modal-image mb-3 mx-auto">
-                            <img src="images/Remote_Lab/IPv4_1.png" alt="Client VM" class="modal-image mb-3 mx-auto">
-                            <h2>To begin, both the client and server had their network settings configured to communicate on the same virtual network. The client was then joined to the serverss domain 
-                                (corp.local) by pointing its DNS to the servers IP and authenticating with domain admin credentials. Once domain-joined, the client appeared in Active Directory, 
-                                enabling Group Policy and centralized domain management. With that setup complete, Remote Desktop was enabled on both machines, and the server successfully connected to 
-                                the client via RDP using both a domain user and an administrator account. From that point, the server could manage files, run applications, and perform system configurations 
-                                on the client remotely.</h2>
-                            <img src="images/Remote_Lab/mapped_drive.png" alt="Mapped" class="modal-image mb-3 mx-auto">
-                            <img src="images/Remote_Lab/shared_drive.png" alt="Shared" class="modal-image mb-3 mx-auto">
-                            <img src="images/Remote_Lab/limit_access.png" alt="Limited" class="modal-image mb-3 mx-auto">
-                            <h2>After establishing the RDP connection, shared folders were created on the server and mapped on the client to facilitate file sharing. Users are assigned to groups 
-                                with specific permissions to control access to these shared resources. For example, if John Doe is part of the Sales department, he would be placed in the Sales group in Active Directory. 
-                                That group is granted permissions to the Sales shared folder on the server, and a Group Policy Object automatically maps that folder as a network drive 
-                                (e.g., S:) whenever Sales users log in. This way, only Sales members see and access the Sales drive, and the whole process happens automatically without manual setup on 
-                                each workstation. 
-                            </h2>
-                            <img src="images/Remote_Lab/remote_event.png" alt="Remote Logs" class="modal-image mb-3 mx-auto">
-                            <h2>Event Viewer can also be used to allow administrators to remotely view system, application, and security logs without using RDP. By enabling the necessary firewall 
-                                rules for Remote Event Log Management and ensuring the client is joined to the domain, admins can open Event Viewer on the server, connect to the client by hostname, 
-                                and pull logs directly. This approach streamlines monitoring, improves security, and avoids the need to log in to each workstation individually.
-                            </h2>
-                            <h3 class="flex items-center text-gray-500"><i data-feather="folder" class="mr-2"></i> Virtual Machine · RDP · Active Directory · Windows Server · Group Policy · PowerShell</h3>
-                            <div class="mt-4 flex justify-center">
-                            <button class="bg-black text-white px-4 py-2 rounded-md" onclick="closeModal('Modal6')">Close</button>
+                            <div class="bg-white p-8 max-w-5xl relative">
+
+                                <button class="absolute top-0 right-0 text-black mt-4 mr-2" onclick="closeModal('Modal6')">
+                                    <i data-feather="x"></i>
+                                </button>
+
+                                <h1 class="font-bold text-center text-4xl mb-5">
+                                    Network Infrastructure & Security Monitoring Lab
+                                </h1>
+
+                                <h2 class="py-2 text-center text-lg">
+                                    Designed and deployed a virtual enterprise network using
+                                    <strong>pfSense, VMware, Windows Server, Active Directory, and Splunk</strong>.
+                                    Configured network segmentation, DNS/DHCP services, domain connectivity,
+                                    centralized log collection, and authentication monitoring to simulate
+                                    real-world IT infrastructure and security operations workflows.
+                                </h2>
+
+                                <img src="images/network_infrasec/network-diagram.png" alt="Network Diagram" class="modal-image mb-3">
+
+                                <h2 class="text-2xl font-semibold mt-6 mb-2">Key Responsibilities</h2>
+                                <ul class="list-disc pl-6 text-lg">
+                                    <li>Built a segmented virtual network using <strong>pfSense</strong> for routing and internal connectivity.</li>
+                                    <li>Configured <strong>DNS, DHCP, and Active Directory Domain Services</strong>.</li>
+                                    <li>Joined Windows 11 clients to the domain and validated authentication workflows.</li>
+                                    <li>Enabled Windows auditing and centralized security logs using <strong>Splunk Enterprise</strong>.</li>
+                                    <li>Created searches and dashboards to monitor failed logon activity and authentication events.</li>
+                                    <li>Troubleshot DNS, domain join, connectivity, and log ingestion issues.</li>
+                                </ul>
+
+                                <img src="images/network_infrasec/splunk-log-ingestion.png" alt="Splunk Log Ingestion" class="modal-image my-4">
+                                <img src="images/network_infrasec/failed-logons-table.png" alt="Failed Logon Events" class="modal-image my-4">
+                                <img src="images/network_infrasec/brute-force-detection-results.png" alt="Brute Force Detection" class="modal-image my-4">
+
+                                <h2 class="text-2xl font-semibold mt-6 mb-2">Security Monitoring</h2>
+                                <p class="text-lg">
+                                    Leveraged Windows Event ID <strong>4625 (Failed Logon)</strong> to identify
+                                    authentication failures, investigate suspicious login activity, and detect
+                                    potential brute-force attempts through Splunk searches and dashboard visualizations.
+                                </p>
+
+                                <h2 class="text-2xl font-semibold mt-6 mb-2">Skills Demonstrated</h2>
+
+                                <h3 class="flex items-center text-gray-500">
+                                    <i data-feather="folder" class="mr-2"></i>
+                                    VMware · pfSense · Active Directory · Windows Server · DNS · DHCP · Splunk · SIEM · Log Analysis · Network Troubleshooting
+                                </h3>
+
+                                <div class="mt-4 flex justify-center">
+                                    <button class="bg-black text-white px-4 py-2 rounded-md" onclick="closeModal('Modal6')">
+                                        Close
+                                    </button>
+                                </div>
+
                             </div>
-                        </div>
                         </div>
                     </div>
 
-                   <!-- Modal 5: VM IT Lab -->
+
+                <!-- Modal: Remote Lab -->
+
                     <div id="Modal5" class="fixed inset-0 overflow-y-auto hidden bg-black bg-opacity-75 z-50">
                         <div class="flex items-center justify-center min-h-screen">
-                        <div class="bg-white p-8 max-w-5xl relative">
-                            <button class="absolute top-0 right-0 text-black mt-4 mr-2" onclick="closeModal('Modal5')"><i data-feather="x"></i></button>
-                            <h1 class="font-bold text-center text-4xl mb-5">Virtual Machine IT Lab</h1>
-                            <h2 class="py-2 text-center">A hands-on IT lab using VirtualBox and Windows Server 2022 to simulate enterprise environments.
-                            Configured a domain controller, managed users, groups, and Organizational Units (OUs) in Active Directory,
-                            and implemented Group Policy Objects (GPOs) to enforce password policies and desktop restrictions.
-                            Automated repetitive administrative tasks by developing PowerShell scripts for creating users from CSV files
-                            and cleaning disabled accounts, streamlining identity management and improving operational efficiency.</h2><br>
-                            <img src="images/Virtualbox_IT_Lab/virtualbox.png" alt="VM" class="modal-image mb-3">
-                            <img src="images/Virtualbox_IT_Lab/password_reset.png" alt="Password Reset" class="modal-image mb-3">
-                            <img src="images/Virtualbox_IT_Lab/disabled_users.png" alt="Disabled Users" class="modal-image mb-3">
-                            <img src="images/Virtualbox_IT_Lab/powershell_csv_script.png" alt="CSV Script" class="modal-image mb-3">
-                            <img src="images/Virtualbox_IT_Lab/default_wallpaper.png" alt="Default Wallpaper" class="modal-image mb-3">
-                            <h3 class="flex items-center text-gray-500"><i data-feather="folder" class="mr-2"></i> Virtual Machine · Active Directory · Windows Server · Group Policy · PowerShell</h3>
-                            <div class="mt-4 flex justify-center">
-                            <button class="bg-black text-white px-4 py-2 rounded-md" onclick="closeModal('Modal5')">Close</button>
+                            <div class="bg-white p-8 max-w-5xl relative">
+
+                                <button class="absolute top-0 right-0 text-black mt-4 mr-2" onclick="closeModal('Modal5')">
+                                    <i data-feather="x"></i>
+                                </button>
+
+                                <h1 class="font-bold text-center text-4xl mb-5">
+                                    Remote Desktop Protocol Lab
+                                </h1>
+
+                                <h2 class="py-2 text-center text-lg">
+                                    Built a VirtualBox-based Windows domain lab to practice remote administration,
+                                    domain connectivity, shared resource management, Group Policy, and remote event log monitoring.
+                                    The lab simulated common enterprise IT support workflows where administrators manage client systems
+                                    remotely through RDP, Active Directory, file shares, and Windows management tools.
+                                </h2>
+
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
+                                    <img src="images/Remote_Lab/IPv4_2.png" alt="Server IPv4 Configuration" class="modal-image mx-auto">
+                                    <img src="images/Remote_Lab/IPv4_1.png" alt="Client IPv4 Configuration" class="modal-image mx-auto">
+                                </div>
+
+                                <h2 class="text-2xl font-semibold mt-6 mb-2">What I Configured</h2>
+                                <ul class="list-disc pl-6 text-lg leading-snug">
+                                    <li>Configured Windows Server and client networking on the same virtual network.</li>
+                                    <li>Pointed client DNS to the domain controller and joined the workstation to <strong>corp.local</strong>.</li>
+                                    <li>Enabled and tested <strong>Remote Desktop Protocol</strong> access using domain and administrator accounts.</li>
+                                    <li>Created shared folders and controlled access using <strong>Active Directory security groups</strong>.</li>
+                                    <li>Mapped network drives through <strong>Group Policy</strong> for department-based resource access.</li>
+                                    <li>Used remote Event Viewer access to review workstation logs without manually logging into the client.</li>
+                                </ul>
+
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-4">
+                                    <img src="images/Remote_Lab/mapped_drive.png" alt="Mapped Network Drive" class="modal-image mx-auto">
+                                    <img src="images/Remote_Lab/shared_drive.png" alt="Shared Folder Configuration" class="modal-image mx-auto">
+                                    <img src="images/Remote_Lab/limit_access.png" alt="Access Permissions" class="modal-image mx-auto">
+                                </div>
+
+                                <h2 class="text-2xl font-semibold mt-6 mb-2">Access Control & File Sharing</h2>
+                                <p class="text-lg leading-relaxed">
+                                    Configured department-based access by assigning users to Active Directory groups and granting
+                                    those groups permissions to specific shared folders. Group Policy was used to automatically map
+                                    shared drives for users at login, reducing manual workstation setup and improving consistency
+                                    across the domain environment.
+                                </p>
+
+                                <img src="images/Remote_Lab/remote_event.png" alt="Remote Event Log Monitoring" class="modal-image my-4 mx-auto">
+
+                                <h2 class="text-2xl font-semibold mt-6 mb-2">Remote Log Monitoring</h2>
+                                <p class="text-lg leading-relaxed">
+                                    Enabled Remote Event Log Management so administrators could connect to client machines by hostname
+                                    and review system, application, and security logs from the server. This demonstrated a safer and more
+                                    efficient troubleshooting workflow than opening full RDP sessions for every log review task.
+                                </p>
+
+                                <h2 class="text-2xl font-semibold mt-6 mb-2">Skills Demonstrated</h2>
+                                <h3 class="flex items-center text-gray-500">
+                                    <i data-feather="folder" class="mr-2"></i>
+                                    VirtualBox · RDP · Active Directory · Windows Server · DNS · Group Policy · File Shares · Remote Event Viewer
+                                </h3>
+
+                                <div class="mt-4 flex justify-center">
+                                    <button class="bg-black text-white px-4 py-2 rounded-md" onclick="closeModal('Modal5')">
+                                        Close
+                                    </button>
+                                </div>
+
                             </div>
                         </div>
-                        </div>
                     </div>
-                
-                    <!-- Modal 4: Fish Recognition Model -->
+
+                    
+                <!-- Modal: VM IT Lab -->
+
                     <div id="Modal4" class="fixed inset-0 overflow-y-auto hidden bg-black bg-opacity-75 z-50">
                         <div class="flex items-center justify-center min-h-screen">
-                            <div class="bg-white p-8 max-w-5xl w-auto relative">
-                                <!-- Modal content -->                          
-                                <button class="absolute top-0 right-0 text-black mt-4 mr-2" onclick="closeModal('Modal4')"><i data-feather="x"></i></button>                           
-                                <h1 class="font-bold text-center text-4xl mb-5">Galveston Fish Recognition</h1>
-                                <h2 class="py-2 text-center">
-                                    Fish Recognition Model created with the goal of identifying common species of fish that originate from
-                                    the Galveston area. The model is trained on 10 different species that include the following:
+                            <div class="bg-white p-8 max-w-5xl relative">
+
+                                <button class="absolute top-0 right-0 text-black mt-4 mr-2" onclick="closeModal('Modal4')">
+                                    <i data-feather="x"></i>
+                                </button>
+
+                                <h1 class="font-bold text-center text-4xl mb-5">
+                                    Virtual Machine IT Administration Lab
+                                </h1>
+
+                                <h2 class="py-2 text-center text-lg">
+                                    Built a Windows Server 2022 lab in VirtualBox to simulate enterprise IT administration.
+                                    Configured Active Directory Domain Services, created users, groups, and Organizational Units,
+                                    applied Group Policy Objects, and automated routine account management tasks with PowerShell.
+                                    The lab focused on identity management, policy enforcement, and administrative efficiency.
                                 </h2>
-                                
+
+                                <img src="images/Virtualbox_IT_Lab/virtualbox.png" alt="VirtualBox Windows Server Lab" class="modal-image my-4 mx-auto">
+
+                                <h2 class="text-2xl font-semibold mt-6 mb-2">What I Configured</h2>
+                                <ul class="list-disc pl-6 text-lg leading-snug">
+                                    <li>Installed and configured <strong>Windows Server 2022</strong> in a VirtualBox lab environment.</li>
+                                    <li>Deployed <strong>Active Directory Domain Services</strong> to simulate centralized identity management.</li>
+                                    <li>Created and organized <strong>users, security groups, and Organizational Units</strong>.</li>
+                                    <li>Applied <strong>Group Policy Objects</strong> to enforce password policies and desktop restrictions.</li>
+                                    <li>Performed password reset and disabled-user management tasks.</li>
+                                    <li>Used <strong>PowerShell</strong> to automate user creation from CSV files and clean up disabled accounts.</li>
+                                </ul>
+
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
+                                    <img src="images/Virtualbox_IT_Lab/password_reset.png" alt="Password Reset in Active Directory" class="modal-image mx-auto">
+                                    <img src="images/Virtualbox_IT_Lab/disabled_users.png" alt="Disabled Users in Active Directory" class="modal-image mx-auto">
+                                </div>
+
+                                <h2 class="text-2xl font-semibold mt-6 mb-2">Automation & Administration</h2>
+                                <p class="text-lg leading-relaxed">
+                                    Developed PowerShell scripts to reduce repetitive administrative work, including bulk user creation
+                                    from CSV files and cleanup of disabled accounts. This improved consistency, reduced manual errors,
+                                    and mirrored common entry-level system administration workflows.
+                                </p>
+
+                                <img src="images/Virtualbox_IT_Lab/powershell_csv_script.png" alt="PowerShell CSV User Creation Script" class="modal-image my-4 mx-auto">
+
+                                <h2 class="text-2xl font-semibold mt-6 mb-2">Group Policy Management</h2>
+                                <p class="text-lg leading-relaxed">
+                                    Configured Group Policy Objects to enforce security and user environment settings, including password
+                                    requirements and desktop customization. This demonstrated how administrators standardize user settings
+                                    across domain-joined systems.
+                                </p>
+
+                                <img src="images/Virtualbox_IT_Lab/default_wallpaper.png" alt="Group Policy Desktop Wallpaper" class="modal-image my-4 mx-auto">
+
+                                <h2 class="text-2xl font-semibold mt-6 mb-2">Skills Demonstrated</h2>
+                                <h3 class="flex items-center text-gray-500">
+                                    <i data-feather="folder" class="mr-2"></i>
+                                    VirtualBox · Windows Server 2022 · Active Directory · Group Policy · PowerShell · User Management · System Administration
+                                </h3>
+
+                                <div class="mt-4 flex justify-center">
+                                    <button class="bg-black text-white px-4 py-2 rounded-md" onclick="closeModal('Modal4')">
+                                        Close
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                
+                <!-- Modal: Fish Recognition Model -->
+                    <div id="Modal3" class="fixed inset-0 overflow-y-auto hidden bg-black bg-opacity-75 z-50">
+                        <div class="flex items-center justify-center min-h-screen">
+                            <div class="bg-white p-8 max-w-5xl w-auto relative">
+
+                                <button class="absolute top-0 right-0 text-black mt-4 mr-2" onclick="closeModal('Modal3')">
+                                    <i data-feather="x"></i>
+                                </button>
+
+                                <h1 class="font-bold text-center text-4xl mb-5">
+                                    Galveston Fish Recognition Model
+                                </h1>
+
+                                <h2 class="py-2 text-center text-lg">
+                                    Developed a computer vision model capable of identifying common fish species found in the
+                                    Galveston Bay area. The project leveraged transfer learning with MobileNetV2 to classify
+                                    images across multiple species while applying modern deep learning techniques to improve
+                                    accuracy and generalization.
+                                </h2>
+
+                                <h2 class="text-2xl font-semibold mt-6 mb-2">Species Classification</h2>
+
                                 <div class="flex justify-center">
-                                    <ul class="list-disc pl-5">
+                                    <ul class="list-disc pl-5 text-lg">
                                         <li>Red Drum</li>
                                         <li>Black Drum</li>
                                         <li>Crevalle Jack</li>
@@ -221,77 +378,159 @@
                                     </ul>
                                 </div>
 
-                                <h2 class="py-2 text-center">
-                                    Model was trained via transfer learning using the MobileNetV2 model as a base and adapting the model specifically for fish classification.
-                                    The dataset images are preprocessed and normalized before being split into training and testing sets. The model is fine-tuned with data augmentation,
-                                    drop out layers, batch normalization, and a custom learning rate scheduler. It also uses early stopping and learning rate reduction 
-                                    callbacks for efficient training. It has proven to effectively identify the desired fish species.
-                                </h2>
-                                <img src="images/Fish/flounder.png" alt="Flounder" class="modal-image max-w-full mx-auto"> <br>
-                                <img src="images/Fish/speckled.png" alt="Trout" class="modal-image max-w-full mb-3 mx-auto">
-                                <h3 class="flex items-center text-gray-500"><i data-feather="folder" class="mr-2"></i>HTML, Javascript, Python, Tensorflow, NumPy, Matplotlib, Pandas</h3>
-                                <div class="mt-2 flex justify-center">
-                                    <button class="mt-4 bg-black text-white px-4 py-2 rounded-md" onclick="closeModal('Modal4')">Close</button>
+                                <h2 class="text-2xl font-semibold mt-6 mb-2">Machine Learning Pipeline</h2>
+
+                                <ul class="list-disc pl-6 text-lg leading-snug">
+                                    <li>Implemented <strong>transfer learning</strong> using MobileNetV2 as the base architecture.</li>
+                                    <li>Preprocessed and normalized image datasets for model training.</li>
+                                    <li>Applied <strong>data augmentation</strong> techniques to improve model robustness.</li>
+                                    <li>Utilized <strong>dropout layers and batch normalization</strong> to reduce overfitting.</li>
+                                    <li>Implemented learning rate scheduling, early stopping, and adaptive learning rate reduction.</li>
+                                    <li>Evaluated model performance using training and validation datasets.</li>
+                                </ul>
+
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
+                                    <img src="images/Fish/flounder.png" alt="Southern Flounder Prediction" class="modal-image mx-auto">
+                                    <img src="images/Fish/speckled.png" alt="Speckled Trout Prediction" class="modal-image mx-auto">
                                 </div>
+
+                                <h2 class="text-2xl font-semibold mt-6 mb-2">Project Outcome</h2>
+
+                                <p class="text-lg leading-relaxed">
+                                    Successfully trained a lightweight image classification model capable of recognizing
+                                    multiple Galveston-area fish species. The project provided hands-on experience with
+                                    computer vision workflows, dataset preparation, transfer learning, model tuning,
+                                    and deep learning deployment concepts.
+                                </p>
+
+                                <h2 class="text-2xl font-semibold mt-6 mb-2">Skills Demonstrated</h2>
+
+                                <h3 class="flex items-center text-gray-500">
+                                    <i data-feather="folder" class="mr-2"></i>
+                                    Python · TensorFlow · MobileNetV2 · Computer Vision · Deep Learning · Transfer Learning · NumPy · Pandas · Matplotlib
+                                </h3>
+
+                                <div class="mt-4 flex justify-center">
+                                    <button class="bg-black text-white px-4 py-2 rounded-md" onclick="closeModal('Modal3')">
+                                        Close
+                                    </button>
+                                </div>
+
                             </div>
                         </div>
+
                         <script>
-                            feather.replace({width: '2em', height: '2em'})
+                            feather.replace({width: '2em', height: '2em'});
                         </script>
                     </div>
 
-                    </div>
 
-                <!-- Modal 3: Fuel Quote System -->
-                <div id="Modal3" class="fixed inset-0 overflow-y-auto hidden bg-black bg-opacity-75 z-50">
-                    <div class="flex items-center justify-center min-h-screen">
-                    <div class="bg-white p-8 max-w-5xl relative">
-                        <button class="absolute top-0 right-0 text-black mt-4 mr-2" onclick="closeModal('Modal3')"><i data-feather="x"></i></button>
-                        <h1 class="font-bold text-center text-4xl mb-5">Fuel Quote System</h1>
-                        <h2 class="py-2 text-center">A full-stack web application where users can create accounts, manage profiles, and request fuel price quotes. 
-                        Implemented secure authentication with password hashing, real-time price calculations, and input validation. 
-                        Developed unit-tested login and registration modules to ensure reliability and enhanced project collaboration using Agile workflows, version control, and code demos.</h2><br>
-                        <img src="images/Fuel/Form.png" alt="Fuel Form" class="modal-image mb-3">
-                        <img src="images/Fuel/Table.png" alt="Fuel Table" class="modal-image mb-3">
-                        <h3 class="flex items-center text-gray-500"><i data-feather="folder" class="mr-2"></i> HTML · JavaScript · Tailwind · PHP · PostgreSQL</h3>
-                        <div class="mt-4 flex justify-center">
-                        <button class="bg-black text-white px-4 py-2 rounded-md" onclick="closeModal('Modal3')">Close</button>
+
+                <!-- Modal: Fuel Quote System -->
+                    <div id="Modal2" class="fixed inset-0 overflow-y-auto hidden bg-black bg-opacity-75 z-50">
+                        <div class="flex items-center justify-center min-h-screen">
+                            <div class="bg-white p-8 max-w-5xl relative">
+
+                                <button class="absolute top-0 right-0 text-black mt-4 mr-2" onclick="closeModal('Modal2')">
+                                    <i data-feather="x"></i>
+                                </button>
+
+                                <h1 class="font-bold text-center text-4xl mb-5">
+                                    Fuel Quote System
+                                </h1>
+
+                                <h2 class="py-2 text-center text-lg">
+                                    Built a full-stack fuel quote web application that allows users to register accounts,
+                                    manage profiles, and request fuel pricing estimates. The system includes secure authentication,
+                                    input validation, quote history tracking, and dynamic price calculation using a PHP backend
+                                    with PostgreSQL data storage.
+                                </h2>
+
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
+                                    <img src="images/Fuel/Form.png" alt="Fuel Quote Form" class="modal-image mx-auto">
+                                    <img src="images/Fuel/Table.png" alt="Fuel Quote History Table" class="modal-image mx-auto">
+                                </div>
+
+                                <h2 class="text-2xl font-semibold mt-6 mb-2">What We Built</h2>
+                                <ul class="list-disc pl-6 text-lg leading-snug">
+                                    <li>Developed user registration and login workflows with <strong>secure password hashing</strong>.</li>
+                                    <li>Created profile management features for storing customer and delivery information.</li>
+                                    <li>Implemented a fuel quote form with <strong>frontend and backend input validation</strong>.</li>
+                                    <li>Built dynamic fuel price calculation logic based on user and quote details.</li>
+                                    <li>Stored user, profile, and quote data in a <strong>PostgreSQL</strong> database.</li>
+                                    <li>Displayed quote history so users could review previous fuel requests.</li>
+                                </ul>
+
+                                <h2 class="text-2xl font-semibold mt-6 mb-2">Development Process</h2>
+                                <p class="text-lg leading-relaxed">
+                                    Worked in a team-based Agile/Scrum environment using Git version control, code reviews,
+                                    unit testing, and sprint demos. Contributed to both frontend functionality and backend
+                                    application logic while helping validate login, registration, and quote submission workflows.
+                                </p>
+
+                                <h2 class="text-2xl font-semibold mt-6 mb-2">Skills Demonstrated</h2>
+                                <h3 class="flex items-center text-gray-500">
+                                    <i data-feather="folder" class="mr-2"></i>
+                                    HTML · JavaScript · Tailwind CSS · PHP · PostgreSQL · Authentication · Unit Testing · Agile/Scrum
+                                </h3>
+
+                                <div class="mt-4 flex justify-center">
+                                    <button class="bg-black text-white px-4 py-2 rounded-md" onclick="closeModal('Modal2')">
+                                        Close
+                                    </button>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
-                    </div>
-                </div>
 
-                <!-- Modal 2: Weather App -->
-                <div id="Modal2" class="fixed inset-0 overflow-y-auto hidden bg-black bg-opacity-75 z-50">
-                    <div class="flex items-center justify-center min-h-screen">
-                    <div class="bg-white p-8 max-w-5xl relative">
-                        <button class="absolute top-0 right-0 text-black mt-4 mr-2" onclick="closeModal('Modal2')"><i data-feather="x"></i></button>
-                        <h1 class="font-bold text-center text-4xl mb-5">Weather App</h1>
-                        <img src="images/Weather/Weather.png" alt="Weather App" class="modal-image">
-                        <h2 class="py-2 text-center">A responsive weather app that displays temperature, humidity, wind speed, and sky conditions based on user-selected locations, with dynamic background changes.</h2>
-                        <h3 class="flex items-center text-gray-500"><i data-feather="folder" class="mr-2"></i> HTML · JavaScript · CSS</h3>
-                        <div class="mt-4 flex justify-center">
-                        <button class="bg-black text-white px-4 py-2 rounded-md" onclick="closeModal('Modal2')">Close</button>
+
+                <!-- Modal: Weather App -->
+                    <div id="Modal1" class="fixed inset-0 overflow-y-auto hidden bg-black bg-opacity-75 z-50">
+                        <div class="flex items-center justify-center min-h-screen">
+                            <div class="bg-white p-8 max-w-5xl relative">
+
+                                <button class="absolute top-0 right-0 text-black mt-4 mr-2" onclick="closeModal('Modal1')">
+                                    <i data-feather="x"></i>
+                                </button>
+
+                                <h1 class="font-bold text-center text-4xl mb-5">
+                                    Weather Application
+                                </h1>
+
+                                <img src="images/Weather/Weather.png" alt="Weather Application Interface" class="modal-image mx-auto">
+
+                                <h2 class="py-4 text-center text-lg">
+                                    Developed a responsive weather application that retrieves and displays real-time weather data
+                                    based on user-selected locations. The application dynamically updates weather conditions,
+                                    temperature, humidity, wind speed, and visual elements to create an interactive user experience.
+                                </h2>
+
+                                <h2 class="text-2xl font-semibold mt-6 mb-2">Features</h2>
+                                <ul class="list-disc pl-6 text-lg leading-snug">
+                                    <li>Retrieved and displayed real-time weather information for user-selected locations.</li>
+                                    <li>Displayed temperature, humidity, wind speed, and sky conditions.</li>
+                                    <li>Implemented responsive layouts for desktop and mobile devices.</li>
+                                    <li>Created dynamic background and interface updates based on weather conditions.</li>
+                                    <li>Utilized asynchronous JavaScript requests to fetch weather data efficiently.</li>
+                                </ul>
+
+                                <h2 class="text-2xl font-semibold mt-6 mb-2">Skills Demonstrated</h2>
+                                <h3 class="flex items-center text-gray-500">
+                                    <i data-feather="folder" class="mr-2"></i>
+                                    HTML · CSS · JavaScript · API Integration · Responsive Design · Frontend Development
+                                </h3>
+
+                                <div class="mt-4 flex justify-center">
+                                    <button class="bg-black text-white px-4 py-2 rounded-md" onclick="closeModal('Modal1')">
+                                        Close
+                                    </button>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
-                    </div>
-                </div>
 
-                <!-- Modal 1: 2D Game -->
-                <div id="Modal1" class="fixed inset-0 overflow-y-auto hidden bg-black bg-opacity-75 z-50">
-                    <div class="flex items-center justify-center min-h-screen">
-                    <div class="bg-white p-8 max-w-5xl relative">
-                        <button class="absolute top-0 right-0 text-black mt-4 mr-2" onclick="closeModal('Modal1')"><i data-feather="x"></i></button>
-                        <h1 class="font-bold text-center text-4xl mb-5">2D Platformer Game</h1>
-                        <img src="images/Platformer/2DA.png" alt="2D Game" class="modal-image">
-                        <h2 class="py-2 text-center">A functional 2D platformer featuring two playable characters with running, walking, attacking, and idle animations controlled via keyboard and mouse inputs.</h2>
-                        <h3 class="flex items-center text-gray-500"><i data-feather="folder" class="mr-2"></i> Unity · C# · Clip Studio</h3>
-                        <div class="mt-4 flex justify-center">
-                        <button class="bg-black text-white px-4 py-2 rounded-md" onclick="closeModal('Modal1')">Close</button>
-                        </div>
-                    </div>
-                    </div>
-                </div>
 
                 <script>
                     function openModal(elementId) {
